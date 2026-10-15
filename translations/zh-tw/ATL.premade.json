@@ -1,0 +1,315 @@
+{
+	"label": "令牌預設效果",
+	"entries": {
+		"Self Vision": {
+			"name": "自身視覺 (Self Vision)",
+			"description": "<p>無視覺 (No vision)</p>",
+			"effects": {
+				"Self Vision": {
+					"name": "自身視覺 (Self Vision)",
+					"changes": {
+						"ATL.dimSight": 0,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Light": {
+			"name": "光亮術 (Light)",
+			"description": "<p>你觸碰一個尺寸在任意方向上都不超過10呎的物件。在法術結束前，該物體會發出半徑20呎的明亮光照，以及額外20呎的微光光照，光線的顏色可隨你的喜好決定。當物體被不透明的物體完全遮蔽時，該光照被遮擋。如果你再次施放此法術，或用一個動作解除，法術效果結束。 (You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.)</p><p>若指定敵對生物持有或穿戴的物品為目標，該生物必須通過一次敏捷豁免才能避免法術影響。 (If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.)</p>",
+			"effects": {
+				"Light": {
+					"name": "光亮術 (Light)",
+					"changes": {
+						"ATL.light.dim": 40,
+						"ATL.light.bright": 20,
+						"ATL.light.animation": "{type: \"none\"}",
+						"ATL.light.color": "#ffffff",
+						"ATL.light.alpha": 0.15
+					}
+				}
+			}
+		},
+		"Bullseye Lantern": {
+			"name": "Bullseye Lantern",
+			"description": "<p>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</p>",
+			"effects": {
+				"Bullseye Lantern": {
+					"name": "Bullseye Lantern",
+					"changes": {
+						"ATL.preset": "lantern",
+						"ATL.light.angle": 60
+					}
+				}
+			}
+		},
+		"Darkvision (120 ft)": {
+			"name": "Darkvision (120 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 120 feet.</p>",
+			"effects": {
+				"Darkvision (120 ft)": {
+					"name": "Darkvision (120 ft)",
+					"changes": {
+						"ATL.dimSight": 120,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Bullseye Lantern (No preset)": {
+			"name": "Bullseye Lantern (No preset)",
+			"description": "<p>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</p>",
+			"effects": {
+				"Bullseye Lantern (No preset)": {
+					"name": "Bullseye Lantern (No preset)",
+					"changes": {
+						"ATL.light.dim": 120,
+						"ATL.light.bright": 60,
+						"ATL.lockRotation": false,
+						"ATL.light.angle": 52.5,
+						"ATL.light.animation": "{type: \"torch\", speed: 2, intensity: 2}",
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		},
+		"Hooded Lantern Bright (No preset)": {
+			"name": "Hooded Lantern Bright (No preset)",
+			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"effects": {
+				"Hooded Lantern Bright (No preset)": {
+					"name": "Hooded Lantern Bright (No preset)",
+					"changes": {
+						"ATL.light.dim": 60,
+						"ATL.light.bright": 30,
+						"ATL.light.animation": "{type: \"torch\", speed: 2, intensity: 2}",
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		},
+		"Torch (No preset)": {
+			"name": "Torch (No preset)",
+			"description": "<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>",
+			"effects": {
+				"Torch (No preset)": {
+					"name": "Torch (No preset)",
+					"changes": {
+						"ATL.light.dim": 40,
+						"ATL.light.bright": 20,
+						"ATL.light.animation": "{type: \"torch\", speed: 2, intensity: 2}",
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		},
+		"Moon-Touched": {
+			"name": "Moon-Touched",
+			"description": "<p>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.</p>",
+			"effects": {
+				"Moon-Touched": {
+					"name": "Moon-Touched",
+					"changes": {
+						"ATL.light.dim": 30,
+						"ATL.light.bright": 15,
+						"ATL.light.animation": "{type: \"none\"}",
+						"ATL.light.color": "#f4f1c9",
+						"ATL.light.alpha": 0.15
+					}
+				}
+			}
+		},
+		"None Light": {
+			"name": "None Light",
+			"description": "<p>No light</p>",
+			"effects": {
+				"None Light": {
+					"name": "None Light",
+					"changes": {
+						"ATL.light.dim": 0,
+						"ATL.light.bright": 0,
+						"ATL.light.animation": {
+							"type": "none"
+						}
+					}
+				}
+			}
+		},
+		"Darkvision (60 ft)": {
+			"name": "Darkvision (60 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.</p>",
+			"effects": {
+				"Darkvision (60 ft)": {
+					"name": "Darkvision (60 ft)",
+					"changes": {
+						"ATL.dimSight": 60,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Torch": {
+			"name": "Torch",
+			"description": "<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>",
+			"effects": {
+				"Torchlight": {
+					"name": "Torchlight",
+					"changes": {
+						"ATL.preset": "torch"
+					}
+				}
+			}
+		},
+		"Darkvision (90 ft)": {
+			"name": "Darkvision (90 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 90 feet.</p>",
+			"effects": {
+				"Darkvision (90 ft)": {
+					"name": "Darkvision (90 ft)",
+					"changes": {
+						"ATL.dimSight": 90,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Darkvision (150 ft)": {
+			"name": "Darkvision (150 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 150 feet.</p>",
+			"effects": {
+				"Darkvision (150 ft)": {
+					"name": "Darkvision (150 ft)",
+					"changes": {
+						"ATL.dimSight": 150,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Darkvision (180 ft)": {
+			"name": "Darkvision (180 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 180 feet.</p>",
+			"effects": {
+				"Darkvision (180 ft)": {
+					"name": "Darkvision (180 ft)",
+					"changes": {
+						"ATL.dimSight": 180,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Darkvision (30 ft)": {
+			"name": "Darkvision (30 ft)",
+			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 30 feet.</p>",
+			"effects": {
+				"Darkvision (30 ft)": {
+					"name": "Darkvision (30 ft)",
+					"changes": {
+						"ATL.dimSight": 30,
+						"ATL.brightSight": 0
+					}
+				}
+			}
+		},
+		"Candle": {
+			"name": "Candle",
+			"description": "<p>For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</p>",
+			"effects": {
+				"Candle": {
+					"name": "Candle",
+					"changes": {
+						"ATL.preset": "candle"
+					}
+				}
+			}
+		},
+		"Goggles of Night": {
+			"name": "Goggles of Night",
+			"description": "<p><em>Wondrous item</em></p>\n<p>While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the goggles increases its range by 60 feet.</p>",
+			"effects": {
+				"Goggles of Night": {
+					"name": "Goggles of Night",
+					"changes": {
+						"ATL.dimSight": 60
+					}
+				}
+			}
+		},
+		"Hooded Lantern": {
+			"name": "Hooded Lantern",
+			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"effects": {
+				"Hooded Lantern": {
+					"name": "Hooded Lantern",
+					"changes": {
+						"ATL.preset": "lantern"
+					}
+				}
+			}
+		},
+		"Lamp (No Preset)": {
+			"name": "Lamp (No Preset)",
+			"description": "<p>A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil</p>",
+			"effects": {
+				"Lamp (No preset)": {
+					"name": "Lamp (No preset)",
+					"changes": {
+						"ATL.light.dim": 45,
+						"ATL.light.bright": 15,
+						"ATL.light.animation": "{type: \"torch\", speed: 2, intensity: 2}",
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		},
+		"Devil's Sight (Warlock)": {
+			"name": "Devil's Sight (Warlock)",
+			"description": "<p><span style=\"color:#191813;font-size:13px\">You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.</span></p>",
+			"effects": {
+				"Devil's Sight (Warlock)": {
+					"name": "Devil's Sight (Warlock)",
+					"changes": {
+						"ATL.dimSight": 0,
+						"ATL.brightSight": 120
+					}
+				}
+			}
+		},
+		"Hooded Lantern Dim (No preset)": {
+			"name": "Hooded Lantern Dim (No preset)",
+			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"effects": {
+				"Hooded Lantern Dim (No preset)": {
+					"name": "Hooded Lantern Dim (No preset)",
+					"changes": {
+						"ATL.light.dim": 5,
+						"ATL.light.bright": 0,
+						"ATL.light.animation": "{type: \"torch\", speed: 2, intensity: 2}",
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		},
+		"Candle (No preset)": {
+			"name": "Candle (No preset)",
+			"description": "<p>For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</p>",
+			"effects": {
+				"Candle (No preset)": {
+					"name": "Candle (No preset)",
+					"changes": {
+						"ATL.light.dim": 10,
+						"ATL.light.bright": 5,
+						"ATL.light.color": "#f8c377",
+						"ATL.light.alpha": 0.4
+					}
+				}
+			}
+		}
+	}
+}
