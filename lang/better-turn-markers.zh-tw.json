@@ -1,0 +1,49 @@
+{
+	"BetterTurnMarkers": {
+		"opacity": {
+			"label": "不透明度",
+			"desc": "設定回合標記的不透明度。"
+		},
+		"scale": {
+			"label": "縮放",
+			"desc": "設定媒體的縮放比例。"
+		},
+		"position": {
+			"label": "錨點",
+			"desc": "設定回合標記的錨點位置。",
+			"top_center": "上方",
+			"top_left": "左上",
+			"top_right": "右上",
+			"center": "中央",
+			"center_left": "左側",
+			"center_right": "右側",
+			"bottom_center": "下方",
+			"bottom_left": "左下",
+			"bottom_right": "右下"
+		},
+		"zIndex": {
+			"label": "層級",
+			"desc": "設定回合標記的層級。",
+			"above": "在角色令牌上方",
+			"below": "在角色令牌下方"
+		},
+		"rotationDirection": {
+			"label": "旋轉方向",
+			"desc": "設定回合標記的旋轉方向。",
+			"left": "向左旋轉",
+			"right": "向右旋轉"
+		},
+		"animationSpeed": {
+			"label": "動畫速度",
+			"desc": "設定所選動畫的播放速度。"
+		},
+		"offsetX": {
+			"label": "偏移（X 軸）",
+			"desc": "將角色令牌在水平方向偏移幾格。"
+		},
+		"offsetY": {
+			"label": "偏移（Y 軸）",
+			"desc": "將角色令牌在垂直方向偏移幾格。"
+		}
+	}
+}

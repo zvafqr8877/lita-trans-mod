@@ -1,30 +1,45 @@
 {
-	"id": "lita-trans-mod",
-	"title": "莉塔翻譯包",
-	"version": "1.0.2",
-	"compatibility": {
-		"minimum": "13",
-		"verified": "14"
-	},
-	"esmodules": [
-		"babele-register.js"
-	],
-	"languages": [
-		{
-			"lang": "zh-tw",
-			"name": "繁體中文",
-			"path": "lang/betterroofs.zh-tw.json"
-		}
-	],
-	"relationships": {
-		"requires": [
-			{
-				"id": "babele",
-				"type": "module"
-			}
-		]
-	},
-	"url": "https://github.com/zvafqr8877/lita-trans-mod",
-	"manifest": "https://github.com/zvafqr8877/lita-trans-mod/releases/latest/download/module.json",
-	"download": "https://github.com/zvafqr8877/lita-trans-mod/releases/latest/download/module.zip"
+  "id": "lita-trans-mod",
+  "title": "莉塔翻譯包",
+  "version": "1.0.2",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "esmodules": [
+    "babele-register.js"
+  ],
+  "languages": [
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/betterroofs.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/visual-active-effects.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/vision-5e.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/better-turn-markers.zh-tw.json"
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "babele",
+        "type": "module"
+      }
+    ]
+  },
+  "url": "https://github.com/zvafqr8877/lita-trans-mod",
+  "manifest": "https://github.com/zvafqr8877/lita-trans-mod/releases/latest/download/module.json",
+  "download": "https://github.com/zvafqr8877/lita-trans-mod/releases/latest/download/module.zip"
 }
