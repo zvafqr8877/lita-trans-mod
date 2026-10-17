@@ -1,0 +1,15 @@
+{
+	"betterroofs": {
+		"tileConfig": {
+			"showInFog.name": "穿透戰爭迷霧顯示",
+			"showInFog.hint": "當角色令牌能看見這個圖塊時，圖塊會穿透戰爭迷霧顯示。對光源無效。",
+			"occlusionLinkId": "遮蔽連結 ID",
+			"occlusionLinkIdHint": "可填任意文字。當勾選「遮蔽連結來源？」的圖塊被遮蔽（下方有角色令牌）時，所有擁有相同「遮蔽連結 ID」的圖塊也會一併被遮蔽。使用範例：把多片屋頂連結在一起。",
+			"occlusionLinkSource": "遮蔽連結來源？"
+		},
+		"settings": {
+			"hoverFade.name": "滑鼠懸停淡出",
+			"hoverFade.hint": "啟用時，滑鼠移到屋頂上，屋頂會淡出。這是 Foundry VTT 的核心功能，此設定只是讓你可以將它關閉。"
+		}
+	}
+}
