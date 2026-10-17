@@ -1,0 +1,9 @@
+{
+	"label": "靈光效果Macros",
+	"entries": {
+		"Migrate from Active Auras": {
+			"name": "從動態靈光Active Auras遷移",
+			"command": "await game.modules.get(\"auraeffects\").api.migrateActiveAuras();"
+		}
+	}
+}

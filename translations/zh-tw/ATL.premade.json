@@ -1,9 +1,9 @@
 {
-	"label": "令牌預設效果",
+	"label": "令牌預設效果 (Token Effects premade)",
 	"entries": {
 		"Self Vision": {
 			"name": "自身視覺 (Self Vision)",
-			"description": "<p>無視覺 (No vision)</p>",
+			"description": "<p>無視覺</p>",
 			"effects": {
 				"Self Vision": {
 					"name": "自身視覺 (Self Vision)",
@@ -16,7 +16,7 @@
 		},
 		"Light": {
 			"name": "光亮術 (Light)",
-			"description": "<p>你觸碰一個尺寸在任意方向上都不超過10呎的物件。在法術結束前，該物體會發出半徑20呎的明亮光照，以及額外20呎的微光光照，光線的顏色可隨你的喜好決定。當物體被不透明的物體完全遮蔽時，該光照被遮擋。如果你再次施放此法術，或用一個動作解除，法術效果結束。 (You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.)</p><p>若指定敵對生物持有或穿戴的物品為目標，該生物必須通過一次敏捷豁免才能避免法術影響。 (If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.)</p>",
+			"description": "<p>你碰觸一個任一邊都不大於10呎的物體。直到法術結束前，該物體將散發出20呎半徑的明亮光照和再延伸20呎的微光光照。光的顏色可以隨你喜歡。用不透光的東西完全覆蓋該物體將會遮住光線。此法術將會在你再次施放它或用一個動作解消時結束。</p><p>如果你以一個敵對生物穿戴或持握的物體為目標，則該生物必須成功通過一個敏捷豁免以迴避此法術。</p>",
 			"effects": {
 				"Light": {
 					"name": "光亮術 (Light)",
@@ -31,11 +31,11 @@
 			}
 		},
 		"Bullseye Lantern": {
-			"name": "Bullseye Lantern",
-			"description": "<p>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</p>",
+			"name": "牛眼提燈 (Bullseye Lantern)",
+			"description": "<p>牛眼提燈會投射60呎錐形的明亮光照，以及額外60呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。</p>",
 			"effects": {
 				"Bullseye Lantern": {
-					"name": "Bullseye Lantern",
+					"name": "牛眼提燈 (Bullseye Lantern)",
 					"changes": {
 						"ATL.preset": "lantern",
 						"ATL.light.angle": 60
@@ -44,11 +44,11 @@
 			}
 		},
 		"Darkvision (120 ft)": {
-			"name": "Darkvision (120 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 120 feet.</p>",
+			"name": "黑暗視覺 120 呎 (Darkvision (120 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍120呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (120 ft)": {
-					"name": "Darkvision (120 ft)",
+					"name": "黑暗視覺 120 呎 (Darkvision (120 ft))",
 					"changes": {
 						"ATL.dimSight": 120,
 						"ATL.brightSight": 0
@@ -57,11 +57,11 @@
 			}
 		},
 		"Bullseye Lantern (No preset)": {
-			"name": "Bullseye Lantern (No preset)",
-			"description": "<p>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</p>",
+			"name": "牛眼提燈（無預設） (Bullseye Lantern (No preset))",
+			"description": "<p>牛眼提燈會投射60呎錐形的明亮光照，以及額外60呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。</p>",
 			"effects": {
 				"Bullseye Lantern (No preset)": {
-					"name": "Bullseye Lantern (No preset)",
+					"name": "牛眼提燈（無預設） (Bullseye Lantern (No preset))",
 					"changes": {
 						"ATL.light.dim": 120,
 						"ATL.light.bright": 60,
@@ -75,11 +75,11 @@
 			}
 		},
 		"Hooded Lantern Bright (No preset)": {
-			"name": "Hooded Lantern Bright (No preset)",
-			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"name": "附蓋提燈－明亮（無預設） (Hooded Lantern Bright (No preset))",
+			"description": "<p>附蓋提燈會投射半徑30呎的明亮光照，以及額外30呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。你可以用一個動作降下燈蓋，使光照減弱為半徑5呎的微光光照。</p>",
 			"effects": {
 				"Hooded Lantern Bright (No preset)": {
-					"name": "Hooded Lantern Bright (No preset)",
+					"name": "附蓋提燈－明亮（無預設） (Hooded Lantern Bright (No preset))",
 					"changes": {
 						"ATL.light.dim": 60,
 						"ATL.light.bright": 30,
@@ -91,11 +91,11 @@
 			}
 		},
 		"Torch (No preset)": {
-			"name": "Torch (No preset)",
-			"description": "<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>",
+			"name": "火炬（無預設） (Torch (No preset))",
+			"description": "<p>火炬可燃燒1小時，提供半徑20呎的明亮光照，以及額外20呎的微光光照。若你用燃燒中的火炬進行近戰攻擊且命中，會造成1點火焰傷害。</p>",
 			"effects": {
 				"Torch (No preset)": {
-					"name": "Torch (No preset)",
+					"name": "火炬（無預設） (Torch (No preset))",
 					"changes": {
 						"ATL.light.dim": 40,
 						"ATL.light.bright": 20,
@@ -107,11 +107,11 @@
 			}
 		},
 		"Moon-Touched": {
-			"name": "Moon-Touched",
-			"description": "<p>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.</p>",
+			"name": "觸月之劍 (Moon-Touched)",
+			"description": "<p>在黑暗環境中，這把劍出鞘的劍刃將散發出月光，創造出15呎半徑的明亮光照和再延伸15呎的微光光照。</p>",
 			"effects": {
 				"Moon-Touched": {
-					"name": "Moon-Touched",
+					"name": "觸月之劍 (Moon-Touched)",
 					"changes": {
 						"ATL.light.dim": 30,
 						"ATL.light.bright": 15,
@@ -123,11 +123,11 @@
 			}
 		},
 		"None Light": {
-			"name": "None Light",
-			"description": "<p>No light</p>",
+			"name": "無光源 (None Light)",
+			"description": "<p>無光源</p>",
 			"effects": {
 				"None Light": {
-					"name": "None Light",
+					"name": "無光源 (None Light)",
 					"changes": {
 						"ATL.light.dim": 0,
 						"ATL.light.bright": 0,
@@ -139,11 +139,11 @@
 			}
 		},
 		"Darkvision (60 ft)": {
-			"name": "Darkvision (60 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.</p>",
+			"name": "黑暗視覺 60 呎 (Darkvision (60 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍60呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (60 ft)": {
-					"name": "Darkvision (60 ft)",
+					"name": "黑暗視覺 60 呎 (Darkvision (60 ft))",
 					"changes": {
 						"ATL.dimSight": 60,
 						"ATL.brightSight": 0
@@ -152,11 +152,11 @@
 			}
 		},
 		"Torch": {
-			"name": "Torch",
-			"description": "<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>",
+			"name": "火炬 (Torch)",
+			"description": "<p>火炬可燃燒1小時，提供半徑20呎的明亮光照，以及額外20呎的微光光照。若你用燃燒中的火炬進行近戰攻擊且命中，會造成1點火焰傷害。</p>",
 			"effects": {
 				"Torchlight": {
-					"name": "Torchlight",
+					"name": "火炬光芒 (Torchlight)",
 					"changes": {
 						"ATL.preset": "torch"
 					}
@@ -164,11 +164,11 @@
 			}
 		},
 		"Darkvision (90 ft)": {
-			"name": "Darkvision (90 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 90 feet.</p>",
+			"name": "黑暗視覺 90 呎 (Darkvision (90 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍90呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (90 ft)": {
-					"name": "Darkvision (90 ft)",
+					"name": "黑暗視覺 90 呎 (Darkvision (90 ft))",
 					"changes": {
 						"ATL.dimSight": 90,
 						"ATL.brightSight": 0
@@ -177,11 +177,11 @@
 			}
 		},
 		"Darkvision (150 ft)": {
-			"name": "Darkvision (150 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 150 feet.</p>",
+			"name": "黑暗視覺 150 呎 (Darkvision (150 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍150呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (150 ft)": {
-					"name": "Darkvision (150 ft)",
+					"name": "黑暗視覺 150 呎 (Darkvision (150 ft))",
 					"changes": {
 						"ATL.dimSight": 150,
 						"ATL.brightSight": 0
@@ -190,11 +190,11 @@
 			}
 		},
 		"Darkvision (180 ft)": {
-			"name": "Darkvision (180 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 180 feet.</p>",
+			"name": "黑暗視覺 180 呎 (Darkvision (180 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍180呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (180 ft)": {
-					"name": "Darkvision (180 ft)",
+					"name": "黑暗視覺 180 呎 (Darkvision (180 ft))",
 					"changes": {
 						"ATL.dimSight": 180,
 						"ATL.brightSight": 0
@@ -203,11 +203,11 @@
 			}
 		},
 		"Darkvision (30 ft)": {
-			"name": "Darkvision (30 ft)",
-			"description": "<p>You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 30 feet.</p>",
+			"name": "黑暗視覺 30 呎 (Darkvision (30 ft))",
+			"description": "<p>你觸碰一名自願的生物，使其獲得在黑暗中視物的能力。在持續時間內，該生物擁有範圍30呎的黑暗視覺。</p>",
 			"effects": {
 				"Darkvision (30 ft)": {
-					"name": "Darkvision (30 ft)",
+					"name": "黑暗視覺 30 呎 (Darkvision (30 ft))",
 					"changes": {
 						"ATL.dimSight": 30,
 						"ATL.brightSight": 0
@@ -216,11 +216,11 @@
 			}
 		},
 		"Candle": {
-			"name": "Candle",
-			"description": "<p>For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</p>",
+			"name": "蠟燭 (Candle)",
+			"description": "<p>蠟燭可持續1小時，投射半徑5呎的明亮光照，以及額外5呎的微光光照。</p>",
 			"effects": {
 				"Candle": {
-					"name": "Candle",
+					"name": "蠟燭 (Candle)",
 					"changes": {
 						"ATL.preset": "candle"
 					}
@@ -228,11 +228,11 @@
 			}
 		},
 		"Goggles of Night": {
-			"name": "Goggles of Night",
-			"description": "<p><em>Wondrous item</em></p>\n<p>While wearing these dark lenses, you have darkvision out to a range of 60 feet. If you already have darkvision, wearing the goggles increases its range by 60 feet.</p>",
+			"name": "夜視護目鏡 (Goggles of Night)",
+			"description": "<p><em>奇物</em></p>\n<p>配戴這副深色鏡片時，你擁有範圍60呎的黑暗視覺。若你原本已有黑暗視覺，配戴護目鏡會使其範圍增加60呎。</p>",
 			"effects": {
 				"Goggles of Night": {
-					"name": "Goggles of Night",
+					"name": "夜視護目鏡 (Goggles of Night)",
 					"changes": {
 						"ATL.dimSight": 60
 					}
@@ -240,11 +240,11 @@
 			}
 		},
 		"Hooded Lantern": {
-			"name": "Hooded Lantern",
-			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"name": "附蓋提燈 (Hooded Lantern)",
+			"description": "<p>附蓋提燈會投射半徑30呎的明亮光照，以及額外30呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。你可以用一個動作降下燈蓋，使光照減弱為半徑5呎的微光光照。</p>",
 			"effects": {
 				"Hooded Lantern": {
-					"name": "Hooded Lantern",
+					"name": "附蓋提燈 (Hooded Lantern)",
 					"changes": {
 						"ATL.preset": "lantern"
 					}
@@ -252,11 +252,11 @@
 			}
 		},
 		"Lamp (No Preset)": {
-			"name": "Lamp (No Preset)",
-			"description": "<p>A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil</p>",
+			"name": "油燈（無預設） (Lamp (No Preset))",
+			"description": "<p>油燈會投射半徑15呎的明亮光照，以及額外30呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。</p>",
 			"effects": {
 				"Lamp (No preset)": {
-					"name": "Lamp (No preset)",
+					"name": "油燈（無預設） (Lamp (No preset))",
 					"changes": {
 						"ATL.light.dim": 45,
 						"ATL.light.bright": 15,
@@ -268,11 +268,11 @@
 			}
 		},
 		"Devil's Sight (Warlock)": {
-			"name": "Devil's Sight (Warlock)",
-			"description": "<p><span style=\"color:#191813;font-size:13px\">You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.</span></p>",
+			"name": "魔鬼視覺（邪術師） (Devil's Sight (Warlock))",
+			"description": "<p><span style=\"color:#191813;font-size:13px\">當你在黑暗中，無論是魔法還是非魔法黑暗，你可以正常看見距離你120呎範圍內的事物。</span></p>",
 			"effects": {
 				"Devil's Sight (Warlock)": {
-					"name": "Devil's Sight (Warlock)",
+					"name": "魔鬼視覺（邪術師） (Devil's Sight (Warlock))",
 					"changes": {
 						"ATL.dimSight": 0,
 						"ATL.brightSight": 120
@@ -281,11 +281,11 @@
 			}
 		},
 		"Hooded Lantern Dim (No preset)": {
-			"name": "Hooded Lantern Dim (No preset)",
-			"description": "<p>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</p>",
+			"name": "附蓋提燈－微光（無預設） (Hooded Lantern Dim (No preset))",
+			"description": "<p>附蓋提燈會投射半徑30呎的明亮光照，以及額外30呎的微光光照。點燃後，每一扁瓶（1品脫）燈油可燃燒6小時。你可以用一個動作降下燈蓋，使光照減弱為半徑5呎的微光光照。</p>",
 			"effects": {
 				"Hooded Lantern Dim (No preset)": {
-					"name": "Hooded Lantern Dim (No preset)",
+					"name": "附蓋提燈－微光（無預設） (Hooded Lantern Dim (No preset))",
 					"changes": {
 						"ATL.light.dim": 5,
 						"ATL.light.bright": 0,
@@ -297,11 +297,11 @@
 			}
 		},
 		"Candle (No preset)": {
-			"name": "Candle (No preset)",
-			"description": "<p>For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</p>",
+			"name": "蠟燭（無預設） (Candle (No preset))",
+			"description": "<p>蠟燭可持續1小時，投射半徑5呎的明亮光照，以及額外5呎的微光光照。</p>",
 			"effects": {
 				"Candle (No preset)": {
-					"name": "Candle (No preset)",
+					"name": "蠟燭（無預設） (Candle (No preset))",
 					"changes": {
 						"ATL.light.dim": 10,
 						"ATL.light.bright": 5,
