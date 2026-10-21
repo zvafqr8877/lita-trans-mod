@@ -1,0 +1,121 @@
+{
+	"DICE_TRAY": {
+		"Adv": "優",
+		"Advantage": "優勢",
+		"DiceTray": "骰盤",
+		"Dis": "劣",
+		"Disadvantage": "劣勢",
+		"FateDice": "命運骰",
+		"For": "幸",
+		"Fortune": "幸運",
+		"Misfortune": "厄運",
+		"Mis": "厄",
+		"Wild": "狂野",
+		"Ace": "王牌",
+		"WildDie": "狂野骰",
+		"ExplodingDie": "爆炸骰",
+		"PlusOneDie": "+1d",
+		"MinusOneDie": "-1d",
+		"PlusOneDieLong": "增大骰面",
+		"MinusOneDieLong": "縮小骰面",
+		"KeepHighest": "保留最高",
+		"KeepLowest": "保留最低",
+		"Roll": "擲骰",
+		"Optional": "選用",
+		"DiceCreator": {
+			"CreateDice": "建立骰子",
+			"Formula": {
+				"name": "公式",
+				"hint": "會被加入聊天的公式。"
+			},
+			"Row": {
+				"name": "列",
+				"hint": "按鈕要放置的列。"
+			},
+			"Image": {
+				"name": "圖片"
+			},
+			"Label": {
+				"name": "標籤",
+				"hint": "骰子沒有圖片時顯示的標籤。"
+			},
+			"Tooltip": {
+				"name": "提示文字",
+				"hint": "滑鼠移到按鈕上時顯示的提示文字，預設為公式。"
+			},
+			"Color": {
+				"name": "顏色",
+				"hint": "填滿圖片的顏色。"
+			},
+			"Alternative": {
+				"name": "替代顯示",
+				"hint": "若圖片無法載入，請選擇此選項。"
+			}
+		},
+		"DiceRows": {
+			"Preview": "預覽",
+			"Pool": "骰池",
+			"compactMode": {
+				"label": "精簡模式"
+			},
+			"hideNumberInput": {
+				"label": "隱藏調整值輸入欄"
+			},
+			"hideNumberButtons": {
+				"label": "隱藏調整值按鈕"
+			},
+			"hideRollButton": {
+				"label": "隱藏擲骰按鈕"
+			}
+		},
+		"KEYBINGINDS": {
+			"popout": {
+				"name": "切換骰盤彈出視窗"
+			}
+		},
+		"SETTINGS": {
+			"DiceCreator": "骰子編輯器",
+			"DiceRowSettings": "骰子列設定",
+			"autoOpenPopout": {
+				"name": "自動開啟彈出視窗",
+				"hint": "頁面載入時，自動開啟骰盤彈出視窗。"
+			},
+			"enableDiceTray": {
+				"name": "啟用骰盤",
+				"hint": "啟用後，會在聊天訊息區下方顯示骰盤。這是使用者個人設定，供不想使用骰盤的玩家關閉。"
+			},
+			"hideAdv": {
+				"name": "隱藏額外按鈕",
+				"hint": "隱藏 KH/KL 按鈕。"
+			},
+			"popout": {
+				"name": "骰盤彈出視窗按鈕",
+				"hint": "在控制列新增一個按鈕，用來切換骰盤彈出視窗。你也可以設定快速鍵來切換。",
+				"options": {
+					"all": "所有控制列"
+				}
+			},
+			"rightClickCommand": {
+				"name": "右鍵指令",
+				"hint": "設定在骰子按鈕上按右鍵時的行為。",
+				"options": {
+					"decrease": "預設（減少骰子）",
+					"roll": "擲一顆骰子"
+				}
+			},
+			"PF2E": {
+				"flatCheckLabel": "{dc} {text}",
+				"flatCheck": {
+					"name": "新增純骰檢定按鈕",
+					"hint": "把幸運／厄運按鈕換成 DC 5/11 的純骰檢定按鈕。"
+				}
+			},
+			"SWADE": {
+				"wildDieBehavior": {
+					"name": "狂野按鈕使用骰池",
+					"hint": "啟用狂野時，重複點擊同一種骰子，會把骰子加入骰池，而不是增加清單中目前的骰子數量。"
+				}
+			}
+		}
+	}
+}

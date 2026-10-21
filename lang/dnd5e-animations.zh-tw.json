@@ -1,0 +1,45 @@
+{
+	"dnd5e-animations": {
+		"updateMenu": {
+			"deleted": "以下效果將從舊版的「D&D5e Animations」中刪除。",
+			"added": "以下效果將新增至你的 Autorecognition 設定。",
+			"custom": "以下效果因已存在且來源不明，將不會新增。",
+			"customHint": "如果你想使用「D&D5e Animations」的版本，請先從你的 Autorecognition 選單中刪除它們。",
+			"updated": "以下效果將從舊版的「D&D5e Animations」（或 Automated Animations 的預設選單）更新。",
+			"nothing": "沒有找到任何更新。",
+			"blacklisted": "以下效果已列入黑名單，將從你的 Autorecognition 選單中移除。",
+			"warning": "請務必先備份你的 Autorecognition 選單！此操作無法復原。",
+			"debugCustom": "以下效果不存在於 D&D5e Animations 中，它們是全新的，會保留在你的 Autorecognition 選單中。"
+		},
+		"notifications": {
+			"update": "D&D5e Animations v{version} 已載入。請檢查是否有新的動畫需要加入你的 Autorecognition 選單！",
+			"unevenGrid": "你的場景格線大小不一致（{grid}px），這很可能會讓目標位置發生偏移！",
+			"gridless": "建議只在有格線的場景使用十字準星。無格線的場景可能會出現問題。",
+			"wrongVersion": "你缺少 <b>{modules}</b>，D&D5e Animations 無法完整運作！請更新列出的模組！",
+			"noDependencies": "你缺少 <b>{modules}</b>，D&D5e Animations 無法完整運作！請啟用列出的模組！",
+			"noJB2A": "你需要啟用一個 <a href=\"https://jb2a.com/home/content-information/#free_library\">JB2A 模組</a>，才能搭配 D&D5e Animations 模組使用！",
+			"noToken": "找不到來源角色令牌。",
+			"noDummy": "缺少召喚巨集所需的假人角色。",
+			"creatingDummy": " 正在建立假人 NPC…… ",
+			"outOfRange": "目標超出範圍。",
+			"noPack": "不知為何找不到「pf2e-jb2a-macros.Actions」資料包？",
+			"tooManyArgs": "此巨集的參數太多！以下參數不相容：{issues}",
+			"noPrem": "你缺少 <a href='https://www.patreon.com/JB2A/membership'>JB2A 素材的付費版</a>，無法使用此動畫！",
+			"metaData": "此動畫在更新時將會被取代。如果你不想被取代，最好的方法是暫時把它的<b>動畫</b>或<b>變體</b>改成別的，或是在設定中啟用除錯模式後，再按一次中繼資料按鈕。"
+		},
+		"settings": {
+			"autoUpdate": {
+				"name": "模組更新時開啟更新選單",
+				"hint": "模組更新時，自動開啟 Autorecognition 更新選單。"
+			},
+			"debug": {
+				"name": "除錯模式",
+				"hint": "在主控台輸出 D&D5e Animations 模組正在執行的紀錄。"
+			},
+			"autorecUpdate": {
+				"name": "動畫更新",
+				"label": "更新選單"
+			}
+		}
+	}
+}

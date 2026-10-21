@@ -1,7 +1,7 @@
 {
   "id": "lita-trans-mod",
   "title": "莉塔翻譯包",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -13,12 +13,122 @@
     {
       "lang": "zh-tw",
       "name": "繁體中文",
+      "path": "lang/acdc.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/auraeffects.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/autoanimations.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/automated-conditions-5e.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/babele-translation-files-generator.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/better-turn-markers.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
       "path": "lang/betterroofs.zh-tw.json"
     },
     {
       "lang": "zh-tw",
       "name": "繁體中文",
-      "path": "lang/visual-active-effects.zh-tw.json"
+      "path": "lang/combat-tracker-dock.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/ddb-importer.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/dice-calculator.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/dnd5e-animations.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/enhancedcombathud.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/enhancedcombathud-dnd5e.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/levels.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/lib-wrapper.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/monks-active-tiles.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/monks-tokenbar.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/multi-token-edit.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/scene-packer.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/sequencer.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/theripper-premium-hub.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/token-action-hud-core.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/token-action-hud-dnd5e.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/tokenizer-2.zh-tw.json"
     },
     {
       "lang": "zh-tw",
@@ -28,7 +138,22 @@
     {
       "lang": "zh-tw",
       "name": "繁體中文",
-      "path": "lang/better-turn-markers.zh-tw.json"
+      "path": "lang/visual-active-effects.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/vtta-tokenizer.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/wall-height.zh-tw.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "繁體中文",
+      "path": "lang/dae.zh-tw.json"
     }
   ],
   "relationships": {

@@ -1,0 +1,204 @@
+{
+	"SEQUENCER": {
+		"OK": "確定",
+		"Cancel": "取消",
+		"PlayerPermissionsWarning": "你好！因為你是 GM，所以你可以建立特效，但預設情況下<strong>你的玩家也可以</strong>。如果你不想這樣，可以點這個按鈕來設定權限：",
+		"Error": {
+			"CouldNotPlay": "無法播放"
+		},
+		"Player": {
+			"Title": "播放器",
+			"SwitchToLayer": "切換至圖層",
+			"PathInput": "輸入資料庫路徑或檔案路徑",
+			"AllUsers": "所有使用者",
+			"Presets": "預設：",
+			"PresetsDefault": "預設值",
+			"ApplyPresetTitle": "套用預設",
+			"ApplyPresetContent": "確定要套用「{preset_name}」預設嗎？尚未儲存的變更將會遺失。",
+			"CreateNewPresetTitle": "建立新的 Sequencer 特效預設",
+			"CreateNewPresetInputLabel": "輸入新的預設名稱",
+			"CopyPresetTitle": "複製 Sequencer 特效預設",
+			"CopyPresetInputLabel": "輸入新的預設名稱",
+			"DefaultErrorTitle": "錯誤",
+			"DefaultErrorContent": "抱歉，你不能把預設命名為「default」，Sequencer 需要保留這個名稱。",
+			"OverwritePresetTitle": "要覆蓋預設嗎？",
+			"OverwritePresetContent": "確定要覆蓋「{preset_name}」預設嗎？",
+			"DeletePresetTitle": "要刪除預設嗎？",
+			"DeletePresetContent": "確定要刪除「{preset_name}」預設嗎？",
+			"Option": {
+				"Scale": "縮放",
+				"BelowTokens": "位於角色令牌下方",
+				"SnapToGrid": "吸附至格線",
+				"Rotation": "旋轉",
+				"Randomize": "隨機化",
+				"FadeIn": "淡入",
+				"FadeOut": "淡出",
+				"ScaleIn": "縮放進場",
+				"ScaleOut": "縮放退場",
+				"MirrorX": "X 軸鏡像",
+				"MirrorY": "Y 軸鏡像",
+				"OffsetX": "X 偏移",
+				"OffsetY": "Y 偏移",
+				"RandomOffset": "數量",
+				"GridUnits": "格線單位",
+				"Repeat": "重複",
+				"Repetitions": "重複次數",
+				"DelayMin": "（毫秒）",
+				"DelayMax": "",
+				"DragBehavior": "拖曳行為",
+				"DragStretch": "拉伸",
+				"DragMove": "移動",
+				"MoveSpeed": "移動速度",
+				"Preload": "預載",
+				"AttachTo": "附著於起點",
+				"StretchToAttach": "附著於終點",
+				"Persist": "持續性"
+			}
+		},
+		"SidebarButtons": {
+			"Select": "選擇特效",
+			"Play": "播放特效",
+			"Manager": "顯示 Sequencer 管理器",
+			"Database": "顯示 Sequencer 資料庫"
+		},
+		"Hotkeys": {
+			"PlayTool": {
+				"Shift": "播放器 - 同時播放多個特效",
+				"Control": "播放器 - 依序播放多個特效",
+				"Alt": "播放器 - 附著於畫布上的物件"
+			},
+			"SelectTool": {
+				"Control": "選取 - 吸附至格線",
+				"Alt": "選取 - 附著於畫布上的物件",
+				"Delete": "選取 - 刪除所選特效"
+			}
+		},
+		"Manager": {
+			"Title": "管理器",
+			"NothingPlaying": "目前沒有正在播放的內容",
+			"PersistentEffects": "持續性特效：",
+			"TemporaryEffects": "暫時性特效：",
+			"PersistentSounds": "持續性音效：",
+			"TemporarySounds": "暫時性音效：",
+			"PlayersEffect": "{user_name} 的特效",
+			"UnknownEffect": "未知使用者的特效",
+			"EndAllEffects": "結束所有特效",
+			"EndAllSounds": "結束所有音效"
+		},
+		"Sequences": {
+			"Title": "序列",
+			"NoSequences": "目前沒有執行中的序列",
+			"AbortSequence": "中止序列",
+			"AbortSection": "中止區段",
+			"ClearFinished": "清除已完成",
+			"Clear": "清除",
+			"StopAll": "全部停止"
+		},
+		"HowTo": {
+			"Title": "使用說明",
+			"Welcome": "歡迎使用 Sequencer 特效！",
+			"Explanation": "使用播放器 <i class=\"fas fa-play-circle\"></i>，你可以快速在畫布上播放特效；使用管理器 <i class=\"fas fa-film\"></i>，你可以隨時結束持續性的特效。",
+			"PermissionsExplanation": "因為你是 GM，所以你可以建立特效，預設情況下你的玩家也可以。你可以點這個按鈕來調整設定：",
+			"PlayerExplanation": "使用播放器 <i class=\"fas fa-play-circle\"></i> 時，你需要設定要播放哪個特效。點擊<strong>檔案輸入欄</strong>可以看到你有哪些資料庫路徑，也可以直接輸入文字搜尋。你也可以按旁邊的 <i class=\"fas fa-file-import\"></i> 按鈕直接搜尋檔案。",
+			"LayerExplanation": "選好檔案之後，在 <i class=\"fas fa-list-ol\"></i> Sequencer 圖層上，你可以進行以下任何操作。",
+			"OpenModuleSettings": "開啟模組設定",
+			"Click": "點擊",
+			"ClickLabel": "在原地播放特效",
+			"ClickDrag": "按住點擊並拖曳",
+			"ClickDragLabel": "播放一個朝某個位置拉伸的特效",
+			"Shift": "Shift",
+			"ShiftLabel": "放開 Shift 後，同時播放多個特效",
+			"ShiftControl": "Ctrl",
+			"ShiftControlLabel": "依序播放多個特效，每個之間會等待",
+			"MoreToCome": "……未來的更新還會有更多功能！"
+		},
+		"ManagerUI": "Sequencer 管理器",
+		"Database": {
+			"Title": "Sequencer 資料庫檢視器",
+			"AllPacks": "所有資料包",
+			"Search": "搜尋……",
+			"ButtonFilepath": "檔案路徑",
+			"ButtonDatabasePath": "資料庫",
+			"ShowAllRanges": "顯示所有距離範圍",
+			"ShowSubLists": "顯示子清單",
+			"ListView": "清單檢視",
+			"Video": "影片",
+			"Sound": "音效",
+			"All": "全部",
+			"FileTypePredicate": "必須啟用「顯示所有距離範圍」才能使用類型篩選。",
+			"PlayPreview": "播放預覽",
+			"CopyFilePath": "複製為直接檔案路徑",
+			"CopyDatabasePath": "複製為 Sequencer 資料庫路徑"
+		},
+		"Setting": {
+			"DatabaseViewer": {
+				"Title": "開啟 Sequencer 資料庫檢視器",
+				"Label": "開啟資料庫檢視器"
+			},
+			"EnablePixiFix": {
+				"Title": "啟用 PIXI 修正",
+				"Label": "啟用 Foundry 中 Sequencer 特效透明度（alpha）的修正——某些環境（瀏覽器、硬體、軟體等）似乎不再需要這個修正。"
+			},
+			"EnableGlobalPixiFix": {
+				"Title": "啟用全域 PIXI 修正",
+				"Label": "啟用 Foundry 中所有動畫 .webm 檔案透明度（alpha）的修正。請謹慎使用。"
+			},
+			"EnableAboveUIScreenspace": {
+				"Title": "啟用 UI 上層的螢幕空間圖層",
+				"Label": "啟用可在 Foundry 所有 UI 元素上方播放特效的圖層——有些使用者回報這個圖層會明顯降低效能，如果遇到這種情況，請停用它。"
+			},
+			"Debug": {
+				"Title": "啟用除錯",
+				"Label": "這會讓 Sequencer 在主控台記錄它正在做的事"
+			},
+			"ShowTools": {
+				"Title": "顯示 Sequencer 工具",
+				"Label": "在側邊欄顯示或隱藏 Sequencer 工具。"
+			},
+			"ShowTokenTools": {
+				"Title": "在角色令牌控制列顯示 Sequencer 工具",
+				"Label": "在側邊欄的角色令牌控制列顯示或隱藏 Sequencer 工具。"
+			},
+			"EnableEffects": {
+				"Title": "啟用特效",
+				"Label": "允許在此客戶端播放特效"
+			},
+			"EnableSounds": {
+				"Title": "啟用音效",
+				"Label": "允許在此客戶端播放音效"
+			},
+			"ExternalEffectOpacity": {
+				"Title": "外部特效不透明度",
+				"Label": "如果你建立的特效是要播放給其他玩家、而不是給你的，把這個值設為 0 以外的數值，會讓特效也顯示給你看，但會是淡化的。所有特效永遠都會顯示給 GM。"
+			},
+			"Permission": {
+				"EffectCreate": {
+					"Title": "Sequencer：播放特效",
+					"Label": "允許所選身分以上的玩家透過巨集與 Sequencer 特效播放器播放特效。"
+				},
+				"EffectDelete": {
+					"Title": "Sequencer：移除所有特效",
+					"Label": "允許所選身分以上的玩家透過 Sequencer 特效管理器移除任何特效。"
+				},
+				"SoundCreate": {
+					"Title": "Sequencer：播放音效",
+					"Label": "允許所選身分以上的玩家透過 "
+				},
+				"PreloadClients": {
+					"Title": "Sequencer：為他人預載",
+					"Label": "允許所選身分以上的玩家為其他玩家預載特效與音效。"
+				},
+				"UseSidebarTools": {
+					"Title": "Sequencer：使用側邊欄工具",
+					"Label": "允許所選身分以上的玩家使用側邊欄工具（他們也必須能夠播放特效）。"
+				}
+			}
+		},
+		"Permission": {
+			"Player": "玩家以上",
+			"Trusted": "受信任玩家以上",
+			"Assistant": "助理 GM 以上",
+			"GM": "僅限 GM"
+		}
+	}
+}

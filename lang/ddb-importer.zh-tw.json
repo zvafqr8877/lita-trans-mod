@@ -1,0 +1,258 @@
+{
+	"ddb-importer": {
+		"module-name": "D&D Beyond 匯入器",
+		"tokenizer2": {
+			"frames-tab-label": "DDB"
+		},
+		"activities": {
+			"macro": {
+				"Title": "巨集（DDB 匯入器）",
+				"Button": "執行巨集",
+				"Config": "巨集設定",
+				"Hide": "隱藏巨集活動",
+				"FIELDS": {
+					"macro": {
+						"label": "巨集",
+						"function": {
+							"label": "巨集名稱或 UUID"
+						},
+						"parameters": {
+							"label": "函式參數"
+						},
+						"visible": {
+							"label": "對所有玩家可見？"
+						},
+						"name": {
+							"label": "按鈕名稱"
+						}
+					}
+				}
+			}
+		},
+		"tattoo": {
+			"CreateSpellwroughtTattoo": "建立法紋刺青",
+			"Details": "刺青詳細資料"
+		},
+		"Welcome": {
+			"Title": "歡迎使用 DDB 匯入器！",
+			"FirstTime": "看來你是第一次使用這個模組！",
+			"SetupButton": "開啟設定地城",
+			"Setup": "DDB 匯入器需要一些資訊才能使用，主要是把它連結到你的 D&D Beyond 帳號。請花點時間照著<a href=\"https://docs.ddb.mrprimate.co.uk/docs/ddb-importer/initial-setup\">這裡</a>的文件操作。它是最新的，也是最好的起點。",
+			"Later": "你之後隨時可以在「設定 > 模組設定 > DDB 匯入器」中變更這些設定！",
+			"Fin": "設定完成後，你就不會再看到這則訊息。"
+		},
+		"settings": {
+			"stickers-upload-path.name": "DDB 貼圖上傳目錄",
+			"stickers-upload-path.hint": "指定伺服器上貼圖的圖片上傳位置，這不是用於冒險，而是用於 DDB 地圖的貼圖。",
+			"maps-upload-path.name": "DDB 地圖圖片上傳目錄",
+			"maps-upload-path.hint": "指定伺服器上地圖的圖片上傳位置，這不是用於冒險，而是用於 DDB 地圖的地圖。",
+			"add-extra-base-weapons.name": "新增額外的基礎武器？",
+			"add-extra-base-weapons.hint": "匯入物品後，要把新的基礎武器加入 Foundry 的基礎武器清單嗎？",
+			"use-basic-rules.name": "解析來源時，要加入 D&D 基礎規則來源，而不是 SRD 或 2024 版玩家手冊嗎？",
+			"use-basic-rules.hint": "如果未勾選，匯入器會盡力改為歸類到 SRD 5.1 或 2024 版玩家手冊來源。請注意，這只是最佳猜測，因為 D&D Beyond 沒有 SRD 來源，只有涵蓋範圍略有不同的「基礎規則」。",
+			"disable-tattoo-type.name": "停用法紋刺青",
+			"disable-tattoo-type.hint": "DDB 匯入器會注入一種刺青消耗品類型，並允許建立法紋刺青。",
+			"persistent-storage-location.name": "永久儲存位置",
+			"persistent-storage-location.hint": "DDB 用來快取 DDB 檔案（例如資料包背景與 DDB 法術圖示）的位置。",
+			"munching-policy-force-spell-version.name": "怪物法術版本",
+			"munching-policy-force-spell-version.hint": "決定怪物要使用 2024 版法術，還是與其原始規則相符的法術版本",
+			"user-hint-setting": "如果你不清楚某個設定的用途，建議保留預設值。有些設定依賴額外的模組，只有在你想讓遊戲增加該程度的自動化時才建議使用。",
+			"user-hint-effects": "有幾個設定提到了 ActiveEffects。請注意，它們並不是<em>動畫</em>特效。",
+			"user-hint-animations": "請注意，它們並不是<em>動畫</em>特效。",
+			"update-check.name": "檢查是否有可用更新？",
+			"log-level.name": "紀錄等級",
+			"log-level.hint": "要在主控台顯示的主控台紀錄訊息等級。",
+			"show-munch-top": {
+				"name": "Munch 按鈕放在頂端？",
+				"hint": "否則按鈕在底部。"
+			},
+			"effects-uses-macro-status-effects.name": "使用巨集狀態效果？",
+			"effects-uses-macro-status-effects.hint": "勾選後，會透過 DAE 的 macro.StatusEffect 方法套用效果，而不是作為一般狀態效果。預設為關閉。",
+			"custom-proxy.name": "使用自訂代理伺服器？",
+			"custom-proxy.hint": "如果使用自訂代理伺服器請勾選，並在下方輸入代理伺服器網址",
+			"image-upload-directory.name": "角色圖片上傳目錄",
+			"image-upload-directory.hint": "指定伺服器上的圖片上傳位置。",
+			"add-ddb-languages.name": "加入 D&D Beyond 語言？",
+			"add-ddb-languages.hint": "如果未勾選，DDB 語言會被加入自訂欄位",
+			"other-image-upload-directory.name": "其他圖片上傳目錄",
+			"other-image-upload-directory.hint": "指定伺服器上的圖片上傳位置。",
+			"frame-image-upload-directory.name": "外框圖片上傳目錄",
+			"frame-image-upload-directory.hint": "指定伺服器上外框圖片的上傳位置。",
+			"scene-upload-directory.name": "場景上傳目錄",
+			"scene-upload-directory.hint": "指定伺服器上場景的上傳位置。",
+			"adventure-import-path.name": "冒險匯入路徑",
+			"adventure-import-path.hint": "模組尋找要匯入的冒險資料檔案的位置",
+			"adventure-upload-path.name": "冒險上傳路徑",
+			"adventure-upload-path.hint": "模組上傳冒險圖片與資料的位置",
+			"adventure-misc-path.name": "冒險其他檔案上傳路徑",
+			"adventure-misc-path.hint": "模組上傳其他冒險檔案（例如圖示）的位置",
+			"monster-link-title.name": "標題列顯示怪物的 D&D Beyond 連結？",
+			"monster-link-title.hint": "否則會是名稱旁的按鈕。（需要重新載入才會生效）",
+			"cobalt-cookie.name": "DDB Cobalt Cookie",
+			"cobalt-cookie.hint": "你可以用我的 Chrome 擴充功能取得：https://github.com/MrPrimate/ddb-importer-chrome",
+			"campaign-id.name": "DDB 戰役網址或 ID",
+			"campaign-id.hint": "輸入戰役網址或 ID，例如 https://www.dndbeyond.com/campaigns/12345 或 12345",
+			"spells-on-items-as-activities.name": "物品上的法術作為活動",
+			"spells-on-items-as-activities.hint": "勾選後，物品上的法術會建立為活動，而不是連結到法術的使用方式",
+			"patreon-key.name": "Patreon 贊助者金鑰",
+			"patreon-key.hint": "在這裡輸入你的 Patreon 贊助者金鑰。",
+			"auto-create-compendium.name": "資料包不存在時自動建立？",
+			"auto-create-compendium.hint": "資料包不存在時自動建立？",
+			"use-full-source.name": "使用完整來源書名？",
+			"use-full-source.hint": "否則使用縮寫",
+			"show-resource-chooser-default.name": "預設顯示資源選擇器？",
+			"show-resource-chooser-default.hint": "新角色是否預設啟用資源選擇器？",
+			"monster-has-vision.name": "匯入的怪物是否要設定視野？",
+			"monster-has-vision.hint": "如果未勾選，怪物不會設定視野",
+			"restrict-to-trusted.name": "限制為受信任的使用者",
+			"restrict-to-trusted.hint": "把角色匯入限制為受信任的使用者",
+			"allow-all-sync.name": "允許所有使用者同步到 DDB",
+			"allow-all-sync.hint": "如果角色匯入受到限制，此選項仍然允許玩家同步回 DDB。",
+			"apply-conditions-with-ce.name": "便利效果狀態？",
+			"apply-conditions-with-ce.hint": "如果已安裝 Convenient Effects，就用它來管理狀態",
+			"use-loose-srd-reference-matching.name": "寬鬆的規則參照？",
+			"use-loose-srd-reference-matching.hint": "嘗試比對任何對 SRD 規則的參照，可能會有一些誤判",
+			"setup.name": "核心設定",
+			"setup.hint": "核心設定選項",
+			"compendium-setup.name": "資料包",
+			"compendium-setup.hint": "設定要使用的資料包",
+			"folder-setup.name": "目錄位置",
+			"folder-setup.hint": "選擇用來儲存圖片的資料夾／目錄",
+			"dynamic-update-setup.name": "動態 DDB 更新設定",
+			"dynamic-update-setup.hint": "把角色更新直接推送回 D&D Beyond！",
+			"character-link-title.name": "標題列顯示角色 DDB 匯入器按鈕？",
+			"character-link-title.hint": "否則會是名稱旁的按鈕。（需要重新載入才會生效）",
+			"link-title-colour-white.name": "標題列圖示改為白色？",
+			"link-title-colour-white.hint": "預設為紅色。需要重新載入才會生效。",
+			"use-damage-hints.name": "使用傷害類型提示？",
+			"use-damage-hints.hint": "組成傷害字串時，例如 1d6[healing]。對 MidiQOL 等模組很有用。",
+			"add-damage-restrictions-to-hints.name": "在傷害提示中加入限制？",
+			"add-damage-restrictions-to-hints.hint": "如果有傷害限制，就把它加到傷害提示中",
+			"allow-scene-download.name": "允許下載場景資料",
+			"allow-scene-download.hint": "如果你想提交場景的牆壁與光源資料，請用這個選項下載設定檔來提交。",
+			"top-level-compendium-folder.name": "最上層資料包資料夾？",
+			"top-level-compendium-folder.hint": "勾選後，會把資料包放進一個名為 D&D Beyond 的資料夾（僅限 v11）",
+			"munching-selection-compendium-folders-monster.name": "資料包資料夾樣式（怪物）",
+			"munching-selection-compendium-folders-monster.hint": "如果使用資料包資料夾，你想讓 Muncher 建立哪種資料夾？",
+			"munching-selection-compendium-folders-spell.name": "資料包資料夾樣式（法術）",
+			"munching-selection-compendium-folders-spell.hint": "如果使用資料包資料夾，你想讓 Muncher 建立哪種資料夾？",
+			"munching-selection-compendium-folders-item.name": "資料包資料夾樣式（物品）",
+			"munching-selection-compendium-folders-item.hint": "如果使用資料包資料夾，你想讓 Muncher 建立哪種資料夾？",
+			"embed-macros": {
+				"name": "把巨集嵌入物品？",
+				"hint": "把巨集嵌入物品？如果未勾選，物品巨集會呼叫 DDB 匯入器即時產生並執行適當的巨集。優點：不需要為了取得巨集而重新 Munch 法術，世界中儲存的資料較少。缺點：較難除錯，而且必須執行 DDB 匯入器。"
+			},
+			"no-item-macros": {
+				"name": "從物品移除巨集？",
+				"hint": "勾選後，會呼叫 Midi-QOL 與 DAE 的 DDB Functions 來執行巨集，優先於嵌入巨集選項。"
+			},
+			"show-image-to-players.name": "顯示「向玩家展示圖片」按鈕？",
+			"show-image-to-players.hint": "在日誌中提供滑鼠移過時顯示的按鈕，可向玩家展示圖片？（需要重新載入）",
+			"show-read-alouds-button.name": "顯示「向玩家朗讀」按鈕？",
+			"show-read-alouds-button.hint": "在日誌中提供滑鼠移過時顯示的按鈕，可向玩家朗讀？（需要重新載入）",
+			"show-read-alouds-all-content.name": "對所有內容啟用朗讀？",
+			"show-read-alouds-all-content.hint": "也在不是由 DDB 匯入器匯入的內容中，顯示向玩家朗讀按鈕。（需要重新載入）",
+			"show-welcome-message.name": "顯示歡迎訊息？",
+			"show-welcome-message.hint": "勾選後，下次登入時會顯示歡迎訊息。",
+			"dynamic-sync": {
+				"dynamic-sync": "啟用動態同步？",
+				"dynamic-sync-policy-currency": "貨幣？",
+				"dynamic-sync-policy-hitpoints": "生命值？",
+				"dynamic-sync-policy-hitdice": "生命骰？",
+				"dynamic-sync-policy-action-use": "動作使用次數？",
+				"dynamic-sync-policy-inspiration": "激勵？",
+				"dynamic-sync-policy-condition": "狀態？",
+				"dynamic-sync-policy-deathsaves": "死亡豁免？",
+				"dynamic-sync-policy-spells-prepared": "已準備的法術？",
+				"dynamic-sync-policy-spells-slots": "法術位？",
+				"dynamic-sync-policy-spells-sync": "已知法術？",
+				"dynamic-sync-policy-equipment": "裝備？",
+				"dynamic-sync-policy-xp": "經驗值？"
+			}
+		},
+		"item-type": {
+			"background": "背景",
+			"character": "玩家",
+			"npc": "怪物",
+			"spell": "法術",
+			"weapon": "武器",
+			"equipment": "裝備",
+			"consumable": "消耗品",
+			"tool": "工具",
+			"loot": "戰利品",
+			"class": "職業",
+			"backpack": "背包",
+			"magic-items": "魔法物品",
+			"magic-item-spells": "魔法物品法術",
+			"extras": "D&D Beyond 額外內容",
+			"scene": "場景"
+		},
+		"label": {
+			"Scene": "場景",
+			"Scenes": "場景",
+			"Actor": "角色",
+			"Actors": "角色",
+			"Item": "物品",
+			"Items": "物品",
+			"JournalEntry": "日誌條目",
+			"Journals": "日誌",
+			"Rolltable": "擲骰表",
+			"Rolltables": "擲骰表",
+			"Playlist": "播放清單",
+			"Playlists": "播放清單",
+			"Compendium": "資料包",
+			"Compendiums": "資料包",
+			"AdventureName": "冒險名稱",
+			"Export": "匯出素材",
+			"Import": "匯入冒險",
+			"Working": "處理中",
+			"ActiveModules": "以下模組已啟用：",
+			"ExportOptions": "匯出選項",
+			"References": "更新參照",
+			"RollTable": "擲骰表",
+			"Macros": "巨集"
+		},
+		"adventure-import": {
+			"button": "把冒險匯入世界",
+			"compendium-button": "把冒險匯入冒險資料包",
+			"confirm": "更新已選取的項目",
+			"all": "全部",
+			"selection": "已選取"
+		},
+		"scenes": {
+			"download": "DDB 場景設定",
+			"third-party-download": "第三方場景設定",
+			"detect-grid": "DDB 匯入器：偵測格線",
+			"copy-fields": "複製場景欄位",
+			"copy-level-objects": "複製樓層物件"
+		},
+		"scene-copy": {
+			"title": "複製場景欄位",
+			"source": "來源",
+			"target": "複製到",
+			"choose": "選擇目標場景……",
+			"select-all": "全選",
+			"deselect-all": "取消全選",
+			"copy": "複製",
+			"cancel": "取消"
+		},
+		"Dialogs": {
+			"ResetSettings": {
+				"Label": "重設 DDB 匯入器設定",
+				"Hint": "警告：這會把所有 DDB 匯入器設定重設為預設值。",
+				"Title": "重設設定",
+				"Content": "確定要把 DDB 匯入器模組的所有設定重設為預設值嗎？",
+				"Confirm": "重設模組設定",
+				"Cancel": "取消"
+			},
+			"DDBProxy": {
+				"AppTitle": "DDB 匯入器代理伺服器設定",
+				"Label": "DDB 代理伺服器設定",
+				"Hint": "在這裡設定自訂的 DDB 代理伺服器端點。",
+				"Title": "DDB 代理伺服器設定",
+				"Use": "使用自訂代理伺服器？",
+				"AddressExample": "自訂代理伺服器位址，例如 http://localhost:3000"
+			}
+		}
+	}
+}

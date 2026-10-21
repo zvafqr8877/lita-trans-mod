@@ -1,0 +1,113 @@
+{
+	"tokenActionHud": {
+		"dnd5e": {
+			"1stLevelSpells": "1 環法術",
+			"2ndLevelSpells": "2 環法術",
+			"3rdLevelSpells": "3 環法術",
+			"4thLevelSpells": "4 環法術",
+			"5thLevelSpells": "5 環法術",
+			"6thLevelSpells": "6 環法術",
+			"7thLevelSpells": "7 環法術",
+			"8thLevelSpells": "8 環法術",
+			"9thLevelSpells": "9 環法術",
+			"abilities": "屬性",
+			"activeFeatures": "主動特性",
+			"artifact": "神器",
+			"artificerInfusions": "奇械師注法",
+			"atWillSpells": "隨意施放法術",
+			"backgroundFeatures": "背景特性",
+			"bonusActions": "附贈動作",
+			"cantrips": "戲法",
+			"channelDivinity": "引導神力",
+			"check": "檢定",
+			"checks": "檢定",
+			"classFeatures": "職業特性",
+			"common": "普通",
+			"condition": "狀態",
+			"conditions": "狀態",
+			"counter": "計數器",
+			"counters": "計數器",
+			"crewActions": "船員動作",
+			"defensiveTactics": "防禦戰術",
+			"eldritchInvocations": "魔能祈喚",
+			"elementalDisciplines": "四象法門",
+			"equip": "裝備",
+			"favorites": "我的最愛",
+			"feats": "專長",
+			"fightingStyles": "戰鬥風格",
+			"huntersPrey": "狩者獵物",
+			"innateSpells": "天生法術",
+			"item": "物品",
+			"kiAbilities": "氣能力",
+			"lair": "巢穴",
+			"lairActions": "巢穴動作",
+			"legendary": "傳奇",
+			"legendaryActions": "傳奇動作",
+			"limitedSpells": "次數限制法術",
+			"maneuvers": "戰技",
+			"metamagicOptions": "超魔法選項",
+			"monsterFeatures": "怪物特性",
+			"multiattacks": "多重攻擊",
+			"noAction": "無動作",
+			"otherActions": "其他動作",
+			"pactBoons": "契約恩賜",
+			"pactSpells": "契約法術",
+			"passiveFeatures": "被動特性",
+			"psionicPowers": "靈能力量",
+			"raceFeatures": "種族特性",
+			"rare": "稀有",
+			"rests": "休息",
+			"rollInitiative": "擲先攻",
+			"runes": "符文",
+			"settings": {
+				"abbreviateSkills": {
+					"hint": "以三個字元的縮寫顯示技能與屬性名稱。",
+					"name": "縮寫技能與屬性名稱"
+				},
+				"displaySpellInfo": {
+					"hint": "在法術名稱旁顯示法術材料、專注與儀式狀態。",
+					"name": "顯示法術資訊"
+				},
+				"showActivitiesAsActions": {
+					"hint": "把物品上的每個活動各自顯示為一個動作。點擊活動動作時，會直接執行該活動。停用時，每個物品只有單一動作，點擊後會顯示活動選擇視窗（除非已跳過）。",
+					"name": "將活動顯示為動作"
+				},
+				"showItemsWithoutActivationCosts": {
+					"hint": "顯示啟動消耗為「無」的物品。",
+					"name": "顯示沒有啟動消耗的物品"
+				},
+				"showSlowActions": {
+					"hint": "顯示耗時超過一輪的動作。",
+					"name": "顯示耗時動作"
+				},
+				"showSpellsAcrossGroups": {
+					"hint": "在法術可以施放的每個法術位群組中，都顯示該法術動作。停用時，法術只會出現在它原本的法術位群組。",
+					"name": "在所有可施放的群組中顯示法術"
+				},
+				"showUnchargedItems": {
+					"hint": "顯示已無剩餘充能的物品。",
+					"name": "顯示無充能的物品"
+				},
+				"showUnequippedItems": {
+					"hint": "對玩家角色顯示未裝備的物品欄物品。停用時，只顯示已裝備的物品欄物品。",
+					"name": "對 PC 顯示未裝備的物品"
+				},
+				"showUnequippedItemsNpcs": {
+					"hint": "對 NPC 顯示未裝備的物品欄物品。停用時，只顯示已裝備的物品欄物品。",
+					"name": "對 NPC 顯示未裝備的物品"
+				},
+				"showUnpreparedSpells": {
+					"hint": "顯示未準備的法術。",
+					"name": "顯示未準備的法術"
+				}
+			},
+			"skill": "技能",
+			"skills": "技能",
+			"superiorHuntersDefense": "卓越獵人防禦",
+			"uncommon": "非普通",
+			"unequip": "卸下裝備",
+			"veryRare": "非常稀有",
+			"viewItem": "檢視物品"
+		}
+	}
+}

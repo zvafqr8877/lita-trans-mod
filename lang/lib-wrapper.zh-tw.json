@@ -1,0 +1,127 @@
+{
+	"lib-wrapper": {
+		"settings": {
+			"yes": "是",
+			"no": "否",
+			"save": "儲存",
+			"reload": "重新載入",
+			"reset": "重設",
+			"notify-issues-gm": {
+				"name": "向 GM 通知問題",
+				"hint": "偵測到問題（例如衝突）時，是否通知 GM。"
+			},
+			"notify-issues-player": {
+				"name": "向玩家通知問題",
+				"hint": "偵測到問題（例如衝突）時，是否通知玩家。"
+			},
+			"high-performance-mode": {
+				"name": "高效能模式",
+				"hint": "停用大部分動態衝突偵測功能以換取效能，對低階系統特別有幫助。請注意，這會大幅降低偵測到衝突的機率，因此建議在安裝或更新套件時關閉此選項。"
+			},
+			"log-verbosity": {
+				"name": "詳細程度",
+				"hint": "libWrapper 在 Javascript 主控台輸出訊息的詳細程度。",
+				"choices": {
+					"never": "從不",
+					"all": "全部",
+					"trace": "追蹤",
+					"debug": "除錯",
+					"info": "資訊",
+					"warning": "警告",
+					"error": "錯誤",
+					"critical": "嚴重",
+					"always": "一律"
+				}
+			},
+			"menu": {
+				"title": "libWrapper 設定選單",
+				"priorities": {
+					"name": "優先順序",
+					"package-inactive": "未啟用",
+					"statistics-disabled": "注意：統計資料收集已停用，無法顯示未設定優先順序的套件。",
+					"prioritized": {
+						"title": "優先套件",
+						"hint": "相較於不在此清單中的套件，這些套件會被優先處理。\n清單中位置越前面，優先順序越高。"
+					},
+					"unprioritized": {
+						"title": "未設定優先順序的套件",
+						"hint": "這些套件既不優先也不延後。\n這些套件之間的優先順序採先到先得。\n新的套件預設會放在這個清單。"
+					},
+					"deprioritized": {
+						"title": "延後套件",
+						"hint": "相較於不在此清單中的套件，這些套件會被延後處理。\n清單中位置越前面，優先順序越高。",
+						"note": "請注意，沒有使用 libWrapper 的套件，優先順序比這些套件還要更低。"
+					}
+				},
+				"conflicts": {
+					"name": "衝突",
+					"none-detected": "沒有偵測到任何衝突。",
+					"statistics-disabled": "統計資料收集已停用。",
+					"show-ignored": "顯示已忽略的衝突"
+				},
+				"active-wrappers": {
+					"name": "運作中的包裝器",
+					"none-active": "目前沒有任何運作中的包裝器。"
+				},
+				"about": {
+					"name": "關於",
+					"full-name": "關於 libWrapper",
+					"credits": "{name} {version}，作者：{author}。",
+					"credits-translation": "",
+					"description": "「libWrapper」是一個函式庫，讓套件開發者能以簡單的方式修改 Foundry VTT 的核心程式碼，同時降低與其他套件衝突的可能性。",
+					"info": "你可以在 <a href=\"{repo_url}\">Foundry VTT 套件庫</a>以及專案的 <a href=\"{github_url}\">Github 頁面</a>找到更多關於這個模組的資訊。",
+					"support": "<b>如果你遇到任何問題</b>，最簡單的求助方式是詢問社群。社群提供的主要支援管道有：",
+					"issue-tracker": "如果你遇到 <b>libWrapper 內部錯誤</b>，或你是<b>套件開發者</b>，也可以到 <a href=\"{issues_url}\">libWrapper Github 問題追蹤</a>提出支援請求。"
+				},
+				"warning-reset-priorities": "重設套件優先順序會把所有套件移回「未設定優先順序」。此操作無法復原。確定要繼續嗎？",
+				"warning-save": "建議重新載入此頁面，以套用新的套件優先順序。要重新載入嗎？"
+			}
+		},
+		"packages": {
+			"unknown-title": "未知",
+			"type-plus-id": "{type} {id}",
+			"type-plus-title": "{type} {title}",
+			"types": {
+				"module": "模組",
+				"system": "系統",
+				"world": "世界腳本",
+				"unknown": "套件"
+			}
+		},
+		"error": {
+			"see-js-console": "（請查看 JS 主控台）",
+			"tech-details": "== 技術細節：",
+			"community-support": "向社群尋求支援：",
+			"not-lw": "這*不是* libWrapper 的錯誤。",
+			"external": {
+				"notification": "{title}：在{type}中偵測到錯誤。",
+				"message": "在{type} {title} 中偵測到錯誤。",
+				"info": "在這裡查看此{type}的資訊：{url}",
+				"report": "在這裡回報此問題：{url}",
+				"likely-not-updated": "此{type}很可能還沒有針對 FVTT {version} 更新。"
+			},
+			"internal": {
+				"message": "偵測到內部錯誤。",
+				"message-with-package": "偵測到內部錯誤，牽涉到{type} {title}。",
+				"info": "在這裡查看 libWrapper 的資訊：{url}",
+				"report": "在這裡回報此問題：{url}"
+			},
+			"conflict": {
+				"potential": "{main} 與 {other} 修改了相同的 FoundryVTT 功能，比較容易發生衝突。",
+				"confirmed": "偵測到 {main} 與 {other} 之間發生衝突。",
+				"info": "在這裡查看這些套件的資訊：",
+				"report": "在這裡回報此衝突："
+			}
+		},
+		"support-channels": [
+			{
+				"title": "FoundryVTT Discord 的 #modules-troubleshooting 頻道",
+				"url": "https://discord.gg/foundryvtt"
+			},
+			{
+				"title": "FoundryVTT Reddit",
+				"url": "https://www.reddit.com/r/FoundryVTT"
+			}
+		]
+	}
+}

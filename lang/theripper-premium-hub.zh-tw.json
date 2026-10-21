@@ -1,0 +1,63 @@
+{
+	"theripper-premium-hub": {
+		"settings": {
+			"autoCheck": {
+				"name": "啟動時檢查更新",
+				"hint": "載入世界時，自動檢查我的付費模組是否有更新。"
+			},
+			"checkDisabled": {
+				"name": "檢查未啟用的模組",
+				"hint": "檢查已安裝但未啟用的模組是否有更新。"
+			}
+		},
+		"tweaks-menu": {
+			"title": "微調",
+			"label": "設定微調",
+			"hint": "設定一些方便使用的功能，例如啟動巨集、精簡標題列按鈕與 CSS 微調。",
+			"tabs": {
+				"misc": "其他",
+				"startup-macros": "啟動巨集",
+				"css-tweaks": "CSS 微調"
+			},
+			"initMacros": {
+				"name": "啟動巨集",
+				"hint": "載入世界時執行巨集。巨集會依照這裡列出的順序執行。"
+			},
+			"readyMacros": {
+				"name": "就緒巨集",
+				"hint": "客戶端準備就緒時執行巨集。巨集會依照這裡列出的順序執行。"
+			},
+			"cssTweak": {
+				"name": "CSS 微調",
+				"hint": "撰寫自訂 CSS 來修改 Foundry 或模組的樣式。提供三個欄位方便整理，你也可以只用其中一個。"
+			},
+			"cleanHeaderButtons": {
+				"name": "精簡標題列按鈕",
+				"hint": "移除標題列按鈕上的文字，讓畫面更簡潔。如果你使用很多我的模組，視窗標題列可能會有很多按鈕，此選項會移除按鈕上的文字。（需要 LibWrapper）"
+			},
+			"compactSidebar": {
+				"name": "精簡側邊欄",
+				"hint": "縮小側邊欄的項目，讓畫面能容納更多項目。"
+			},
+			"enableSettingsSwap": {
+				"name": "強制客戶端設定",
+				"hint": "啟用後，可以把客戶端設定改為世界設定。這會對所有客戶端強制套用所選的設定，玩家也將無法再看到這些設定。"
+			},
+			"diceTray": {
+				"name": "骰盤",
+				"hint": "在聊天紀錄中加入骰盤，讓你可以擲骰並加上調整值。"
+			},
+			"autoRotate": {
+				"name": "自動旋轉",
+				"hint": "自動旋轉角色令牌，使其面向移動方向與目標角色令牌。",
+				"none": "停用",
+				"defaultOn": "啟用（預設開啟）",
+				"defaultOff": "啟用（預設關閉）",
+				"on": "啟用",
+				"off": "停用",
+				"default": "預設"
+			}
+		},
+		"wtcNotification": "{setting} 的設定已改為 {value}。請重新載入遊戲讓變更生效。在下次重新載入之前，此設定的變更不會被儲存。"
+	}
+}

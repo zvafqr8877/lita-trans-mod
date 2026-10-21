@@ -1,0 +1,218 @@
+{
+	"MassEdit": {
+		"behavior": {
+			"linkToken": {
+				"linkId": {
+					"label": "連結 ID",
+					"hint": "用來在區域與角色令牌之間建立連結的 ID。"
+				}
+			}
+		},
+		"form": {
+			"immediate-update-title": "欄位變更時自動套用更新。",
+			"global-search-title": "啟用世界搜尋。",
+			"global-delete-title": "刪除。",
+			"actions": "動作",
+			"images": "圖片",
+			"shaders": "著色器",
+			"delete-warning": "正在刪除 [{count}] 個{document}",
+			"proceed": "要繼續嗎？",
+			"search-and-edit": "搜尋並編輯",
+			"apply-on-current-scene": "套用於目前場景",
+			"apply-on-all-scenes": "套用於所有場景",
+			"apply-update-proto": "套用並更新原型",
+			"apply-json": "套用 JSON 資料",
+			"mass-search-title": "大量搜尋{document}",
+			"mass-edit-title": "大量編輯{document} [ {count} ]",
+			"adding": "加上",
+			"subtracting": "減去"
+		},
+		"dialog": {
+			"search-document": "選擇你想搜尋的文件類型：",
+			"document-not-found": "`找不到所選類型的文件。（{document}）`"
+		},
+		"generic-form": {
+			"step-size": "步進大小",
+			"define-range": "定義範圍控制項",
+			"define-dropdown": "定義下拉選單控制項",
+			"pinned": "已釘選"
+		},
+		"clipboard": {
+			"copy": "大量編輯：已複製{document}資料到剪貼簿",
+			"paste": "大量編輯：已把資料貼到 {count} 個{document}"
+		},
+		"macro": {
+			"dependency-warning": "此巨集需要啟用 {module} 模組。",
+			"target-all-title": "巨集執行時，會以所選「範圍」內的所有{document}為目標。",
+			"target-ids": "目前所選物件的 ID",
+			"target-ids-title": "目前所選文件的 ID 會儲存在巨集中。",
+			"target-search-title": "巨集執行時，會搜尋符合特定欄位的{document}。",
+			"target-tagger-title": "巨集執行時，會以 Tagger 模組的標籤為目標。",
+			"target-current-scene-title": "巨集會套用於目前啟用中的場景。"
+		},
+		"keybindings": {
+			"presetApply": {
+				"name": "開啟預設瀏覽器",
+				"hint": "開啟可放置物件、背包與場景設定的瀏覽器。"
+			},
+			"presetApplyScene": {
+				"name": "開啟場景預設瀏覽器",
+				"hint": "開啟場景設定預設瀏覽器。"
+			},
+			"selectKey": {
+				"name": "開啟可放置物件搜尋與選取",
+				"hint": "按下後會開啟設定視窗，讓你選擇欄位，模組會依這些欄位在目前場景中搜尋並選取可放置物件。"
+			},
+			"editKey": {
+				"name": "開啟多重可放置物件編輯",
+				"hint": "按下後會開啟設定視窗，同時更新所有已選取的可放置物件。"
+			},
+			"genericForm": {
+				"name": "開啟通用多重物件編輯",
+				"hint": "按下後會開啟設定視窗，同時更新所有已選取的物件。"
+			},
+			"linkerMenu": {
+				"name": "開啟連結器選單",
+				"hint": "可以在可放置物件之間建立與刪除連結的選單。"
+			},
+			"placeableEdit": {
+				"name": "可放置物件預覽編輯",
+				"hint": "已選取的可放置物件，或快速鍵啟用後選取的可放置物件，會進入預覽模式，可進行大量轉換。"
+			}
+		},
+		"settings": {
+			"autoSnap": {
+				"name": "座標自動吸附至格線",
+				"hint": "在座標隨機化選單中使用「選取範圍」時，範圍數值會自動吸附至格線。"
+			},
+			"panToSearch": {
+				"name": "移動視野至搜尋目標",
+				"hint": "自動把畫面置中於找到的第一個可放置物件。"
+			},
+			"tmfxFieldsEnable": {
+				"name": "插入 TMFX 欄位",
+				"hint": "會在大量編輯表單中加入 DungeonDraft 色調顏色與預設濾鏡欄位。選取這些欄位會套用 TokenMagicFX 濾鏡。"
+			},
+			"enableFlagsTab": {
+				"name": "旗標分頁",
+				"hint": " 啟用後，大量編輯表單會新增「旗標」分頁，可更新與移除文件旗標。"
+			},
+			"rangeToTextbox": {
+				"name": "允許手動輸入範圍滑桿的數值",
+				"hint": "把滑桿的數值標籤轉換成文字方塊。"
+			},
+			"singleDocDefaultConfig": {
+				"name": "單一可放置物件：預設設定",
+				"hint": "選取或滑鼠移到單一可放置物件上時，開啟預設設定視窗，而不是修改過的大量編輯設定。"
+			}
+		},
+		"randomizer": {
+			"interpolate": "內插",
+			"interpolateReverse": "內插（反向）",
+			"pickRange": "選擇範圍",
+			"addImagesToList": "把圖片加入清單",
+			"listOfImages": "隨機化時使用的圖片清單",
+			"selectFolder": "選擇資料夾",
+			"includeSubfolders": "包含子資料夾",
+			"sequential": "依序",
+			"findAndReplace": "尋找與取代",
+			"findAndReplaceRegex": "尋找與取代（正規表示式）",
+			"generators": "產生器",
+			"listOfStrings": "隨機化時使用的字串清單",
+			"allowDuplicates": "允許重複",
+			"stepSize": "步進大小",
+			"snapToGrid": "吸附至格線"
+		},
+		"presets": {
+			"preset-browser": "預設瀏覽器",
+			"drag-placeable-message": "把可放置物件拖進來以建立預設。",
+			"drag-placeable": "拖入的可放置物件",
+			"drag-placeable-hint": "與預設一起生成的額外可放置物件。",
+			"drag-over-message": "建立預設",
+			"default-name": "新預設",
+			"spawning": "生成",
+			"main": "主要",
+			"tags": "標籤",
+			"warn-no-fields": "沒有選取任何欄位，無法更新。",
+			"imported": "已匯入 {count} 個預設。",
+			"import": "匯入預設",
+			"assign": "已把 {count} 個{document}指派給預設。",
+			"select-compendium": "選擇資料包",
+			"working-directory-message": "更改模組用來儲存與編輯預設的資料包。請確認其中沒有非預設的日誌，以避免發生意外問題。",
+			"update-preset": "更新預設",
+			"delete-fields": "刪除欄位",
+			"select-delete": "選擇你想從此預設中移除的欄位。",
+			"select-modify": "選擇在生成預設時會提示修改的欄位。",
+			"data-edit": "編輯儲存在預設中的{document}資料。",
+			"data-assign": "把目前所選的{document}指派給預設。",
+			"controls": {
+				"activate-brush": "啟用筆刷",
+				"document-lock": "開啟表單時，鎖定目前分類為預設。",
+				"layer-switch": "自動切換圖層。",
+				"external-compendiums": "顯示外部資料包。",
+				"scale-to-grid": "依格線大小縮放圖塊、繪圖與牆壁。",
+				"virtual-directory": "顯示虛擬目錄。"
+			},
+			"export-as-json": "匯出為 JSON",
+			"open-journal": "開啟日誌",
+			"apply-to-selected": "套用於所選的可放置物件",
+			"apply-to-selected-warn": "此操作不能混用多種文件類型的預設。",
+			"export-to-compendium": "匯出至資料包",
+			"copy-to-clipboard": "複製到剪貼簿",
+			"copy-source-to-clipboard": "複製原始資料到剪貼簿",
+			"keep-ids": "保留 ID",
+			"keep-ids-hint": "目的地中 ID 相同的預設與資料夾會被覆蓋。",
+			"search-presets": "搜尋預設",
+			"search-presets-folders": "搜尋預設與資料夾",
+			"delete-presets-warn": "你即將永久刪除 [ {count} ] 個預設。",
+			"spawn-random": "不生成整個群組，改為隨機生成一個可放置物件。",
+			"bag": {
+				"search": "搜尋",
+				"appearance": "外觀",
+				"misc": "其他"
+			}
+		},
+		"css": {
+			"pick": "選擇樣式："
+		},
+		"common": {
+			"range": "範圍",
+			"min": "最小值",
+			"max": "最大值",
+			"random": "隨機",
+			"randomize": "隨機化",
+			"color": "顏色",
+			"method": "方式",
+			"find": "尋找",
+			"replace": "取代",
+			"list": "清單",
+			"generate": "產生",
+			"pin": "釘選",
+			"preset": "預設",
+			"presets": "預設",
+			"delete": "刪除",
+			"apply": "套用",
+			"ratio": "比例",
+			"options": "選項",
+			"all": "全部",
+			"swap": "交換",
+			"import": "匯入",
+			"copy": "複製",
+			"paste": "貼上",
+			"data": "資料",
+			"modify": "修改",
+			"placeable": "可放置物件",
+			"attach": "附著",
+			"attached": "已附著"
+		}
+	},
+	"TYPES": {
+		"RegionBehavior": {
+			"multi-token-edit": {
+				"linkToken": "連結角色令牌",
+				"spawnPreset": "生成預設",
+				"deSpawnPreset": "取消生成預設"
+			}
+		}
+	}
+}

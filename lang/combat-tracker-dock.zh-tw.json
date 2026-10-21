@@ -1,0 +1,255 @@
+{
+	"combat-tracker-dock": {
+		"configureCarousel": "設定輪播",
+		"combat-dock": {
+			"title": "戰鬥追蹤列",
+			"close": "關閉"
+		},
+		"contextMenu": {
+			"setAsCurrent": "設為目前的戰鬥者"
+		},
+		"combatConfig": {
+			"portraitResource": {
+				"label": "頭像資源條",
+				"hint": "會以覆蓋層顯示在頭像圖片上方的資源條，設為「無」即停用。"
+			}
+		},
+		"settings": {
+			"systems": {
+				"crucible": {
+					"alwaysShowActions": {
+						"name": "顯示敵人的行動點數",
+						"hint": "如果啟用了「顯示系統圖示」，則不論權限，都向玩家顯示行動點數。這會讓玩家看到盟友與敵人總共有多少、剩下多少行動點數。沒有權限查看專注點數的玩家，仍然看不到專注點數。"
+					}
+				}
+			},
+			"integration": "整合",
+			"floatingSize": {
+				"name": "浮動視窗大小",
+				"hint": "浮動視窗的大小。數值越大，視窗越大。這不會影響水平（停靠）模式。"
+			},
+			"portraitSize": {
+				"name": "輪播大小",
+				"hint": "輪播中頭像的最大尺寸。請注意，如果戰鬥者太多、螢幕放不下，頭像尺寸會自動縮小。",
+				"choices": {
+					"30px": "極小",
+					"50px": "小",
+					"70px": "一般",
+					"90px": "大",
+					"110px": "特大",
+					"150px": "超大",
+					"180px": "極大"
+				}
+			},
+			"lessButtons": {
+				"name": "精簡按鈕",
+				"hint": "在戰鬥追蹤器中顯示較少的按鈕，隱藏重設先攻、設定、上一輪、下一輪。"
+			},
+			"carouselStyle": {
+				"name": "輪播樣式",
+				"hint": "頭像在輪播中的擺放與移動方式：輪播 - 置中：行動中的戰鬥者位於輪播中央，其他戰鬥者繞著它輪轉。\n- 輪播 - 靠左：行動中的戰鬥者位於輪播左側，其他戰鬥者繞著它輪轉。\n- 無輪播：戰鬥者永遠依先攻順序排列，行動中的戰鬥者會移動，其他戰鬥者位置不變。",
+				"choices": {
+					"centerCarousel": "輪播 - 置中",
+					"leftCarousel": "輪播 - 靠左",
+					"basic": "無輪播"
+				}
+			},
+			"overflowStyle": {
+				"name": "溢出樣式",
+				"hint": "戰鬥者太多、螢幕放不下時，輪播的處理方式。",
+				"choices": {
+					"hidden": "隱藏",
+					"scroll": "捲動",
+					"autofit": "縮小頭像"
+				}
+			},
+			"portraitAspect": {
+				"name": "頭像長寬比",
+				"hint": "頭像的長寬比。如果圖片與頭像的長寬比不符，圖片會被裁切。",
+				"choices": {
+					"square": "正方形",
+					"portrait": "直式",
+					"long": "長型"
+				}
+			},
+			"alignment": {
+				"name": "對齊",
+				"hint": "輪播的對齊方式。",
+				"choices": {
+					"left": "靠左",
+					"center": "置中",
+					"right": "靠右"
+				}
+			},
+			"direction": {
+				"name": "位置",
+				"hint": "輪播的方向。",
+				"choices": {
+					"row": "水平",
+					"column": "垂直",
+					"rowDocked": "水平（停靠）",
+					"rowFloat": "水平（浮動）",
+					"columnFloat": "垂直（浮動）"
+				}
+			},
+			"roundness": {
+				"name": "圓角程度",
+				"hint": "頭像與提示視窗的圓角程度。",
+				"choices": {
+					"sharp": "尖角",
+					"soft": "微圓角",
+					"round": "圓角"
+				}
+			},
+			"showDispositionColor": {
+				"name": "顯示敵友關係顏色",
+				"hint": "在頭像的下邊框顯示敵友關係。"
+			},
+			"hideDefeated": {
+				"name": "隱藏已被擊敗者",
+				"hint": "從輪播中隱藏已被擊敗的戰鬥者。如果你需要與他們互動，他們仍會顯示在一般的戰鬥追蹤器中。"
+			},
+			"showInitiativeOnPortrait": {
+				"name": "在頭像上顯示先攻",
+				"hint": "在頭像左上角顯示先攻值。你隨時都可以在提示視窗中看到先攻！"
+			},
+			"portraitImageBorder": {
+				"name": "玩家邊框",
+				"hint": "玩家角色會顯示的特殊邊框。留空即停用。如果你想製作自訂圖片，建議以預設圖片作為尺寸參考。"
+			},
+			"attributeColor": {
+				"name": "屬性顏色",
+				"hint": "輪播中主要追蹤屬性的文字與資源條顏色。你可以使用任何有效的 CSS 顏色值（例如 #ff0000、red、rgba(255,0,0,0.5) 等）。"
+			},
+			"attributeColor2": {
+				"name": "次要屬性顏色",
+				"hint": "輪播中次要追蹤屬性的文字與資源條顏色。你可以使用任何有效的 CSS 顏色值（例如 #ff0000、red、rgba(255,0,0,0.5) 等）。"
+			},
+			"attributeColorPortrait": {
+				"name": "頭像屬性顏色",
+				"hint": "追蹤屬性在頭像覆蓋層資源條上的顏色。你可以使用任何有效的 CSS 顏色值（例如 #ff0000、red、rgba(255,0,0,0.5) 等）。"
+			},
+			"barsPlacement": {
+				"name": "資源條位置",
+				"hint": "輪播中追蹤屬性資源條的擺放位置。",
+				"choices": {
+					"left": "靠左",
+					"right": "靠右",
+					"twinned": "雙邊"
+				}
+			},
+			"attributeVisibility": {
+				"name": "屬性顯示方式",
+				"hint": "輪播中追蹤屬性的顯示方式。",
+				"choices": {
+					"text": "僅文字",
+					"bars": "僅資源條",
+					"both": "文字與資源條"
+				}
+			},
+			"playerPlayerPermission": {
+				"name": "一律顯示玩家資訊",
+				"hint": "允許所有玩家看到其他玩家的追蹤屬性、提示資訊與系統圖示。"
+			},
+			"displayDescriptions": {
+				"name": "顯示說明",
+				"hint": "在提示視窗中顯示 Active Effects 的說明。",
+				"choices": {
+					"none": "無",
+					"owner": "擁有者／觀察者",
+					"all": "所有人"
+				}
+			},
+			"portraitImage": {
+				"name": "頭像圖片",
+				"hint": "要使用角色或角色令牌的圖片作為頭像。",
+				"choices": {
+					"actor": "角色",
+					"token": "角色令牌"
+				}
+			},
+			"portraitImageBackground": {
+				"name": "頭像背景",
+				"hint": "頭像後方的背景圖片，當頭像透明或沒有填滿空間時會顯示。"
+			},
+			"showSystemIcons": {
+				"name": "顯示系統圖示",
+				"hint": "在追蹤資源下方、提示視窗或兩者中顯示系統圖示。請注意，這需要各系統專屬的實作，只對部分系統有效。",
+				"choices": {
+					"none": "無",
+					"tooltip": "提示視窗",
+					"resource": "頭像",
+					"both": "兩者"
+				}
+			},
+			"hideConflictingUIs": {
+				"name": "隱藏衝突的介面",
+				"hint": "戰鬥追蹤列顯示時，自動隱藏停靠在畫面頂端的其他介面，避免畫面雜亂。"
+			},
+			"displayName": {
+				"name": "顯示名稱",
+				"hint": "是否在提示視窗中顯示戰鬥者的名稱。「依角色令牌」只有在玩家看得到角色令牌名稱時才會顯示名稱。",
+				"choices": {
+					"default": "一律",
+					"token": "依角色令牌",
+					"owner": "依擁有權"
+				}
+			},
+			"hideFirstRound": {
+				"name": "首回合前隱藏",
+				"hint": "在敵人於戰鬥中進行第一個回合之前先隱藏他們。（需要 LibWrapper，才能同時在核心戰鬥追蹤器中隱藏他們。）"
+			},
+			"hideEnemyInitiative": {
+				"name": "隱藏敵人先攻",
+				"hint": "在提示視窗與頭像中隱藏敵人的先攻。"
+			},
+			"attributesMenu": {
+				"name": "提示視窗屬性",
+				"label": "設定屬性",
+				"hint": "設定要顯示在提示視窗中的自訂屬性。",
+				"reset": "重設為預設值",
+				"resetWarning": "確定要把屬性重設為預設值嗎？",
+				"form": {
+					"attr": {
+						"name": "屬性",
+						"choose": "選擇屬性"
+					},
+					"icon": {
+						"name": "圖示"
+					},
+					"units": {
+						"name": "單位"
+					},
+					"save": "儲存並關閉",
+					"add": "新增屬性",
+					"reset": "重設為預設值",
+					"notes": "屬性欄位留空即可移除。"
+				}
+			},
+			"resource": {
+				"name": "次要資源",
+				"hint": "次要資源條。你應該在戰鬥設定中設定它。這個選項是提供給部分系統與熟悉的使用者手動微調。"
+			},
+			"portraitResource": {
+				"name": "頭像資源",
+				"hint": "會以覆蓋層顯示在頭像圖片上方的資源條。你應該在戰鬥設定中設定它。這個選項是提供給部分系統與熟悉的使用者手動微調。"
+			}
+		},
+		"hotkeys": {
+			"combatPrev": {
+				"name": "上一個回合"
+			},
+			"combatNext": {
+				"name": "下一個回合"
+			}
+		},
+		"add-event": {
+			"title": "新增事件",
+			"duration": "事件持續時間（輪）",
+			"error": "錯誤：你必須為事件提供名稱、圖片與先攻值。",
+			"expired": "事件 %n 已結束。"
+		},
+		"deleteEffectTitle": "刪除效果",
+		"deleteEffectContent": "確定要刪除這個效果嗎："
+	}
+}

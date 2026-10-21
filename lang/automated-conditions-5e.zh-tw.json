@@ -1,0 +1,564 @@
+{
+	"AC5E.AutomateStatuses": {
+		"Name": "D&D 5e 狀態規則",
+		"Hint": "為 D&D 5e 狀態啟用 AC5E 處理，擴充 D&D 5e 系統內建的優勢模式自動化，提供更廣泛且更精確的規則處理，特別是攻擊骰。"
+	},
+	"AC5E.Ui": {
+		"Name": "停用 AC5E 介面",
+		"Hint": "停用主動效果數值編輯器中的 AC5E 魔杖按鈕。"
+	},
+	"AC5E.LinksMenu": {
+		"Name": "模組支援",
+		"Label": "連結",
+		"Hint": "開啟 AC5E 的說明文件、問題追蹤與支援連結。",
+		"GitHubMessage": "GitHub 連結",
+		"DiscordMessage": "進入巢穴",
+		"SupportMessage": "賞個銅板給你的熊地精",
+		"Title": "資源與支援"
+	},
+	"AC5E.ActiveEffect.ChangeTypes.AC5E": "AC5E",
+	"AC5E.ActiveEffect.ChangeTypes.AutomatedConditions5e": "Automated Conditions 5e",
+	"AC5E.ShowTooltipsName": "顯示 AC5E 提示",
+	"AC5E.ShowTooltipsHint": "在擲骰視窗、聊天訊息或兩者中顯示 AC5E 提示，說明建議結果的原因。",
+	"AC5E.ShowToolTipsChoicesBoth": "擲骰視窗與聊天訊息",
+	"AC5E.ShowToolTipsChoicesDialog": "僅擲骰視窗",
+	"AC5E.ShowToolTipsChoicesChat": "僅聊天訊息",
+	"AC5E.ShowToolTipsChoicesNone": "不顯示",
+	"AC5E.ShowModuleNameInTooltipsName": "在提示中顯示模組名稱",
+	"AC5E.ShowTooltipChatVisibility.Name": "顯示聊天提示的對象",
+	"AC5E.ShowTooltipChatVisibility.Hint": "選擇誰的擲骰會顯示 AC5E 聊天提示。GM 一律能看到所有提示。",
+	"AC5E.ShowTooltipChatVisibility.All": "全部",
+	"AC5E.ShowTooltipChatVisibility.None": "無",
+	"AC5E.ShowTooltipChatVisibility.Owned": "自己擁有的",
+	"AC5E.ShowTooltipChatVisibility.Players": "玩家",
+	"AC5E.ExpandedConditionsName": "擴充狀態",
+	"AC5E.ExpandedConditionsHint": "為額外的狀態與戰鬥狀況啟用自動化，例如閃避、躲藏、狂暴時的施法限制，以及水下戰鬥。",
+	"AC5E.VisibilityChecksSetting": {
+		"Name": "視線規則",
+		"Hint": "依據角色令牌的視覺與感官使用 AC5E 攻擊視線規則。啟用後，AC5E 會加入「看不見目標」與「目標看不見攻擊者」的攻擊原因。若 MidiQOL 已套用其隱形或隱匿攻擊者規則，則略過這些原因。"
+	},
+	"AC5E.ActivityUse": {
+		"Name": "物品使用規則",
+		"Hint": "控制 AC5E 在擲骰前，對無效的動作使用是允許、警告還是阻擋。適用於使用階段的檢查，例如無力狀態下的行動、施法限制，以及非攻擊類的超出距離失敗。攻擊的超出距離失敗則稍後在攻擊骰設定時，依所選攻擊模式處理。",
+		"Choices": {
+			"Off": "允許",
+			"Enforce": "依情況阻擋／判定失敗",
+			"Warn": "警告"
+		},
+		"Type": {
+			"Armor": {
+				"Enforce": "未熟練所穿戴的護甲，依規則無法施法。法術已取消！",
+				"Warn": "未熟練所穿戴的護甲，依規則無法施法。"
+			},
+			"Incapacitated": {
+				"Enforce": "處於無力狀態，無法進行任何行動。行動已取消！",
+				"Warn": "處於無力狀態，無法進行任何行動。"
+			},
+			"Raging": {
+				"Enforce": "處於狂暴狀態，無法施放法術。法術已取消！",
+				"Warn": "處於狂暴狀態，無法施放法術。"
+			},
+			"Silenced": {
+				"Enforce": "被沉默，無法施放帶有言語成分的法術。法術已取消！",
+				"Warn": "被沉默，無法施放帶有言語成分的法術。"
+			}
+		}
+	},
+	"AC5E.AutoRangeChecks": {
+		"Name": "距離規則",
+		"Hint": "啟用近戰與遠程的距離規則自動化，包括近戰觸及範圍、超出距離失敗、鄰近敵人劣勢，以及長距離劣勢。近戰斜角觸及會將所有相鄰格視為在觸及範圍內，並覆寫斜角格距規則。超出距離失敗會在驗證距離時套用：非攻擊動作在使用時驗證，攻擊動作則在攻擊骰設定時依所選攻擊模式驗證。",
+		"MeleeDiagonals": "近戰斜角觸及",
+		"MeleeOutOfRange": "近戰超出距離",
+		"RangedNearbyFoes": "遠程鄰近敵人",
+		"RangedLongDisadvantage": "遠程長距離劣勢",
+		"RangedOutOfRange": "遠程超出距離"
+	},
+	"AC5E.AutoExhaustionName": "力竭規則",
+	"AC5E.AutoExhaustionHint": "使用舊版 D&D 5e 規則時，啟用 AC5E 的力竭處理。",
+	"AC5E.AutoEncumbranceName": "變體載重規則",
+	"AC5E.AutoEncumbranceHint": "在 AC5E 中啟用變體載重處理。GM 也必須啟用 D&D 5e 系統的變體（負重與超載）選項，否則此設定不會有任何效果。",
+	"AC5E.Targeting": {
+		"Name": "攻擊目標規則",
+		"Hint": "控制 AC5E 在未選目標或選取多個目標時如何處理攻擊骰。",
+		"Choices": {
+			"Source": "忽略目標狀態與旗標",
+			"Enforce": "靜默取消擲骰",
+			"Warn": "取消擲骰並顯示警告"
+		},
+		"MultipleTargetsAttack": {
+			"Source": "AC5E：已選取多個目標。結果可能有偏差。僅使用來源角色資料。",
+			"Enforce": "AC5E：已選取多個目標。擲骰已取消！"
+		},
+		"NoTargetsAttack": {
+			"Source": "AC5E：未選取目標。優勢／劣勢可能不準確。僅使用來源角色資料。",
+			"Enforce": "AC5E：未選取目標。擲骰已取消！"
+		}
+	},
+	"AC5E.DebuggingName": "AC5E 除錯記錄",
+	"AC5E.DebuggingHint": "啟用額外的 AC5E 除錯記錄，供開發與疑難排解使用。",
+	"AC5E.TokenlessActorWarning": {
+		"Hint": "當為目前場景中沒有角色令牌的角色擲骰時顯示警告。",
+		"Name": "顯示無角色令牌警告",
+		"Text": "AC5E 警告：擲骰的角色在場景中沒有角色令牌。結果可能不準確。"
+	},
+	"AC5E.Statuses": {
+		"UnderwaterCombat": "水下戰鬥"
+	},
+	"AC5E.WarCaster": "戰鬥施法者",
+	"AC5E.ModifyAC": "調整後 AC",
+	"AC5E.ModifyDC": "調整後 DC",
+	"AC5E.Fail": "失敗",
+	"AC5E.Alert": "警覺",
+	"AC5E.FailLowerCase": "失敗",
+	"AC5E.Fumble": "大失敗",
+	"AC5E.Rage": "狂暴",
+	"AC5E.Raging": "狂暴中",
+	"AC5E.SubtleSpell": "精妙法術",
+	"AC5E.OutOfRange": "超出距離",
+	"AC5E.Item": "物品",
+	"AC5E.Feats": {
+		"CrossbowExpert": "強弩專家",
+		"Sharpshooter": "神射手",
+		"SpellSniper": "法術射手"
+	},
+	"AC5E.Equipment": "裝備",
+	"AC5E.NearbyFoe": "鄰近敵人",
+	"AC5E.ButtonColorPicker": {
+		"Enabled": {
+			"Name": "自訂擲骰按鈕顏色",
+			"Hint": "自訂擲骰視窗的按鈕顏色。欄位留空則使用預設值。輸入 'user' 使用 game.user.color。輸入 'false'、'none'、'null' 或 '0' 可停用單一顏色覆寫。"
+		},
+		"Background": {
+			"Name": "按鈕背景顏色",
+			"Hint": "留空則使用 game.user.color。"
+		},
+		"Border": {
+			"Name": "按鈕邊框顏色",
+			"Hint": "留空則使用白色。"
+		},
+		"Text": {
+			"Name": "按鈕文字顏色",
+			"Hint": "留空則使用白色。"
+		}
+	},
+	"AC5E.AdvantageKeypress": "優勢按鍵",
+	"AC5E.CriticalKeypress": "重擊按鍵",
+	"AC5E.DisadvantageKeypress": "劣勢按鍵",
+	"AC5E.NoCriticalKeypress": "一般按鍵",
+	"AC5E.OverrideAdvantage": "覆寫優勢按鍵",
+	"AC5E.OverrideCritical": "覆寫重擊按鍵",
+	"AC5E.OverrideDisadvantage": "覆寫劣勢按鍵",
+	"AC5E.OverrideNoCritical": "覆寫一般按鍵",
+	"AC5E.ForcedAdvantage": "系統強制優勢",
+	"AC5E.ForcedDisadvantage": "系統強制劣勢",
+	"AC5E.NoAdvantage": "已抑制優勢",
+	"AC5E.NoCritical": "已抑制重擊",
+	"AC5E.NoDisadvantage": "已抑制劣勢",
+	"AC5E.TargetGrantsNoAdvantage": "授予無優勢",
+	"AC5E.TargetGrantsNoCritical": "授予無重擊",
+	"AC5E.TargetGrantsNoDisadvantage": "授予無劣勢",
+	"AC5E.CannotSeeTarget": "看不見目標",
+	"AC5E.TargetCannotSeeAttacker": "目標看不見攻擊者",
+	"AC5E.Bonus": "加值",
+	"AC5E.AbilityOverride": "屬性覆寫",
+	"AC5E.ExtraDice": "額外骰",
+	"AC5E.Success": "成功",
+	"AC5E.AbbreviationAdvantage": "優勢",
+	"AC5E.AbbreviationDisadvantage": "劣勢",
+	"AC5E.AbbreviationCritical": "重擊",
+	"AC5E.Grants": "授予",
+	"AC5E.Attacker": "攻擊者",
+	"AC5E.Flags": "旗標",
+	"AC5E.FlagsInitiativeAdv": "先攻的系統優勢",
+	"AC5E.FlagsInitiativeDisadv": "先攻的系統劣勢",
+	"AC5E.TargetGrantsAdvantageAbbreviated": "授予優勢",
+	"AC5E.TargetGrantsDisadvantageAbbreviated": "授予劣勢",
+	"AC5E.TargetGrantsCriticalAbbreviated": "授予重擊",
+	"AC5E.TargetGrantsFail": "授予失敗",
+	"AC5E.TargetGrantsFumble": "授予大失敗",
+	"AC5E.TargetGrantsSuccess": "授予成功",
+	"AC5E.TargetGrantsBonus": "授予加值",
+	"AC5E.TargetGrantsModifier": "授予調整值",
+	"AC5E.TargetGrantsExtraDice": "授予額外骰",
+	"AC5E.TargetGrantsAbilityOverride": "授予屬性覆寫",
+	"AC5E.NoChanges": "無變更",
+	"AC5E.SystemMode": "系統模式",
+	"AC5E.OptinDescription.Roll.Attack": "攻擊骰",
+	"AC5E.OptinDescription.Roll.Damage": "傷害骰",
+	"AC5E.OptinDescription.Roll.Check": "檢定",
+	"AC5E.OptinDescription.Roll.Save": "豁免",
+	"AC5E.OptinDescription.Roll.Generic": "擲骰",
+	"AC5E.OptinDescription.GrantsAdvantage": "使{roll}具有優勢",
+	"AC5E.OptinDescription.ImposesDisadvantage": "使{roll}具有劣勢",
+	"AC5E.OptinDescription.RemovesAdvantage": "移除{roll}的優勢",
+	"AC5E.OptinDescription.RemovesDisadvantage": "移除{roll}的劣勢",
+	"AC5E.OptinDescription.ForcesCritical": "強制重擊",
+	"AC5E.OptinDescription.PreventsCritical": "防止重擊",
+	"AC5E.OptinDescription.ForcesFailure": "強制{roll}自動失敗",
+	"AC5E.OptinDescription.ForcesFumble": "強制大失敗",
+	"AC5E.OptinDescription.ForcesSuccess": "強制{roll}自動成功",
+	"AC5E.OptinDescription.SetsRollBonus": "將{roll}加值設為 {value}",
+	"AC5E.OptinDescription.AppliesRollBonus": "對{roll}套用 {value}",
+	"AC5E.OptinDescription.ModifiesRollBonus": "修改{roll}加值",
+	"AC5E.OptinDescription.SetsTargetAC": "將目標 AC 設為 {value}",
+	"AC5E.OptinDescription.ModifiesTargetACBy": "將目標 AC 修改 {value}",
+	"AC5E.OptinDescription.ModifiesTargetAC": "修改目標 AC",
+	"AC5E.OptinDescription.DCLabel.Save": "豁免 DC",
+	"AC5E.OptinDescription.DCLabel.Check": "檢定 DC",
+	"AC5E.OptinDescription.SetsTargetSpecificDC": "將{dcLabel}設為 {value}",
+	"AC5E.OptinDescription.ModifiesTargetSpecificDCBy": "將{dcLabel}修改 {value}",
+	"AC5E.OptinDescription.ModifiesTargetSpecificDC": "修改{dcLabel}",
+	"AC5E.OptinDescription.SetsMinimumD20": "將 d20 最小結果設為 {value}",
+	"AC5E.OptinDescription.SetsMaximumD20": "將 d20 最大結果設為 {value}",
+	"AC5E.OptinDescription.AppliesRollModifier": "套用擲骰調整值",
+	"AC5E.OptinDescription.AppliesRollModifierWithValue": "套用擲骰調整值（{value}）",
+	"AC5E.OptinDescription.SetsMinimumDiceRoll": "將骰子最小結果設為 {value}",
+	"AC5E.OptinDescription.SetsMaximumDiceRoll": "將骰子最大結果設為 {value}",
+	"AC5E.OptinDescription.AppliesDiceRollModifier": "套用骰子擲骰調整值",
+	"AC5E.OptinDescription.AppliesDiceRollModifierWithValue": "套用骰子擲骰調整值（{value}）",
+	"AC5E.OptinDescription.SetsCriticalThreshold": "將重擊門檻設為 {value}",
+	"AC5E.OptinDescription.ModifiesCriticalThreshold": "修改重擊門檻",
+	"AC5E.OptinDescription.SetsFumbleThreshold": "將大失敗門檻設為 {value}",
+	"AC5E.OptinDescription.ModifiesFumbleThreshold": "修改大失敗門檻",
+	"AC5E.OptinDescription.AddsExtraDamageDice": "加入額外傷害骰",
+	"AC5E.OptinDescription.AddsExtraDamageDiceWithValue": "加入額外傷害骰（{value}）",
+	"AC5E.OptinDescription.OverridesDamageType": "覆寫傷害類型",
+	"AC5E.OptinDescription.OverridesDamageTypeWithValue": "覆寫傷害類型（{value}）",
+	"AC5E.OptinDescription.OverridesDcAbility": "覆寫豁免／檢定 DC 屬性（{value}）",
+	"AC5E.OptinDescription.OverridesDcAbilityGeneric": "覆寫豁免／檢定 DC 屬性",
+	"AC5E.Keybinding.AllowEffectApplicationBypassModifier.Name": "效果套用覆寫修飾鍵",
+	"AC5E.Keybinding.AllowEffectApplicationBypassModifier.Hint": "僅限 GM。點擊「套用效果」時按住此鍵，可忽略 allowEffectApplication 檢查。",
+	"AC5E.OptinDescription.UpgradesDamageDice": "提升傷害骰",
+	"AC5E.OptinDescription.UpgradesDamageDiceWithValue": "提升傷害骰（{value}）",
+	"AC5E.OptinDescription.DowngradesDamageDice": "降低傷害骰",
+	"AC5E.OptinDescription.DowngradesDamageDiceWithValue": "降低傷害骰（{value}）",
+	"AC5E.OptinDescription.ModifiesAttackRange": "修改攻擊距離行為",
+	"AC5E.OptinDescription.FinalStandDropsTo": "背水一戰（降至 {value}）",
+	"AC5E.Chance.Triggered": "已觸發",
+	"AC5E.Chance.TriggeredWithRoll": "已觸發（擲出 {roll}）",
+	"AC5E.OptinCadence.OncePerTurn": "（每回合 1 次）",
+	"AC5E.OptinCadence.OncePerRound": "（每輪 1 次）",
+	"AC5E.OptinCadence.OncePerCombat": "（每場戰鬥 1 次）",
+	"AC5E.OptinLegend.Optional": "AC5E",
+	"AC5E.OptinLegend.FromOtherSources": "AC5E 來自其他來源（需詢問許可）",
+	"AC5E.EnvironmentalHazards": {
+		"SettingsName": "環境危害規則",
+		"SettingsHint": "使用 2024 年版 D&D 5e 規則時，啟用燃燒與窒息的自動化處理。",
+		"BurningHazard": "燃燒危害",
+		"SuffocatingHazard": "窒息"
+	},
+	"dae.fieldData.fieldCategories.AC5E": "AC5E",
+	"dae.AC5E.fieldData": {
+		"flags.automated-condition-5e.crossbowExpert": {
+			"name": "強弩專家",
+			"description": "與敵人相距 5 呎內，不會對你使用弩的攻擊骰造成劣勢"
+		},
+		"flags.automated-condition-5e.sharpShooter": {
+			"name": "神射手",
+			"description": "以遠程武器攻擊長距離目標，或與敵人相距 5 呎內時，不會有劣勢"
+		},
+		"flags.automated-condition-5e.spellSniper": {
+			"name": "法術射手",
+			"description": "依 2024 年版規則，與敵人相距 5 呎內施放遠程法術不會有劣勢；射程至少 10 呎的法術，射程額外增加 60 呎"
+		},
+		"flags.automated-conditions-5e.attack.criticalThreshold": {
+			"name": "更改攻擊的 criticalThreshold",
+			"description": "使用 threshold=-5 可減少 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.grants.attack.criticalThreshold": {
+			"name": "對對手的攻擊授予更改後的 criticalThreshold",
+			"description": "使用 threshold=-5 可減少 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.aura.attack.criticalThreshold": {
+			"name": "光環：更改範圍內攻擊的 criticalThreshold",
+			"description": "使用 radius=15;threshold=-5 可減少 5，或使用 radius=20;set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.attack.fumbleThreshold": {
+			"name": "更改攻擊的 fumbleThreshold",
+			"description": "使用 threshold=5 可增加 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.grants.attack.fumbleThreshold": {
+			"name": "對對手的攻擊授予更改後的 fumbleThreshold",
+			"description": "使用 threshold=5 可增加 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.aura.attack.fumbleThreshold": {
+			"name": "光環：更改範圍內攻擊的 fumbleThreshold",
+			"description": "使用 radius=15;threshold=5 可增加 5，或使用 radius=20;set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.damage.extraDice": {
+			"name": "增減每種骰面所擲出的骰子數量",
+			"description": "使用 bonus=4 可使擲出的骰子數量增加 4。"
+		},
+		"flags.automated-conditions-5e.grants.damage.extraDice": {
+			"name": "授予每種骰面所擲骰子數量的增減",
+			"description": "使用 bonus=-1 可使擲出的骰子數量減少 1"
+		},
+		"flags.automated-conditions-5e.aura.damage.extraDice": {
+			"name": "光環：增減範圍內每種骰面所擲出的骰子數量",
+			"description": "使用 bonus=2; radius=10 可使 10 個距離單位半徑內每種骰面所擲出的骰子數量增加。"
+		},
+		"flags.automated-conditions-5e.damage.typeOverride": {
+			"name": "覆寫基礎傷害骰所設定的傷害類型",
+			"description": "使用 override=fire 強制單一類型，或使用 override=fire,lightning,thunder 提供多種類型。為了向下相容，仍支援 set=...。可用 addTo=base、addTo=bonus、addTo=all、addTo=types(fire,cold)、addTo=!types(poison,acid)，或組合子句如 addTo=base;!types(force) 來控制影響哪些傷害部分。"
+		},
+		"flags.automated-conditions-5e.grants.damage.typeOverride": {
+			"name": "對對手的基礎傷害骰授予傷害類型覆寫",
+			"description": "使用 override=fire 強制單一類型，或使用 override=fire,lightning,thunder 提供多種類型。為了向下相容，仍支援 set=...。可用 addTo=base、addTo=bonus、addTo=all、addTo=types(fire,cold)、addTo=!types(poison,acid)，或組合子句如 addTo=base;!types(force) 來控制影響哪些傷害部分。"
+		},
+		"flags.automated-conditions-5e.aura.damage.typeOverride": {
+			"name": "光環：覆寫範圍內基礎傷害骰所設定的傷害類型",
+			"description": "使用 radius=10;override=fire 或 radius=10;override=fire,lightning,thunder。為了向下相容，仍支援 set=...。可用 addTo=base、addTo=bonus、addTo=all、addTo=types(fire,cold)、addTo=!types(poison,acid)，或組合子句如 addTo=base;!types(force) 來控制影響哪些傷害部分。"
+		},
+		"flags.automated-conditions-5e.modifyAC": {
+			"name": "修改角色面對來襲攻擊時的 AC",
+			"description": "使用 bonus=5 可使 AC 加 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.grant.modifyAC": {
+			"name": "對攻擊的對手授予修改後的 AC",
+			"description": "使用 bonus=-5 可使 AC 減 5，或使用 set=15 將數值設為 15。也可使用擲骰資料、骰子公式與條件判斷。"
+		},
+		"flags.automated-conditions-5e.aura.modifyAC": {
+			"name": "光環：修改範圍內相關角色令牌的 AC",
+			"description": "使用 radius=10;bonus=1d4; 或 radius=15;set=15。前者提供 AC 加值，後者將 AC 設為所給的值"
+		},
+		"flags.automated-conditions-5e.abilityOverride": {
+			"name": "覆寫豁免／檢定 DC 屬性",
+			"description": "覆寫該動作計算豁免／檢定 DC 所使用的屬性。使用 override=cha。範例：override=(item.type==='spell' ? spellcastingAbility : wis)。仍支援 abilityOverride=... 與 set=...。"
+		},
+		"flags.automated-conditions-5e.grants.abilityOverride": {
+			"name": "授予豁免／檢定 DC 屬性覆寫",
+			"description": "透過授予方式覆寫受影響角色的豁免／檢定 DC 屬性。使用 override=cha。範例：override=(opponentActor?.details?.type?.value==='fiend' ? cha : wis)。仍支援 abilityOverride=... 與 set=...。"
+		},
+		"flags.automated-conditions-5e.aura.abilityOverride": {
+			"name": "光環：覆寫豁免／檢定 DC 屬性",
+			"description": "覆寫受光環影響之角色令牌的豁免／檢定 DC 屬性。照常使用 radius，再加上 override=cha。範例：radius=30;allies;includeSelf;override=wis。仍支援 abilityOverride=... 與 set=...。"
+		},
+		"flags.automated-conditions-5e.allowEffectApplication": {
+			"name": "允許效果套用",
+			"description": "於效果建立時求值。若此運算式結果為 false，AC5E 會阻擋該效果的套用。若求值發生錯誤，則依系統預設行為繼續套用。"
+		},
+		"flags.automated-conditions-5e.ACTIONTYPE": {
+			"advantage": {
+				"name": "以優勢擲骰",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"bonus": {
+				"name": "擲骰獲得加值",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。例如 bonus=1d4 + 5 - rollingActor.abilities.dex.mod;"
+			},
+			"critical": {
+				"name": "擲骰為重擊（自然 20 或重擊傷害）",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"disadvantage": {
+				"name": "以劣勢擲骰",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"modifier": {
+				"name": "d20 擲骰的最小與最大調整值，以及傷害骰的最大與任意調整值",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。例如 modifier=(rollingActor.attributes.hp.pct < 50 ? max8 : min12)"
+			},
+			"modifyDC": {
+				"name": "修改你所進行行動的 DC。對你進行的專注檢定與死亡豁免也有效",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：save/conc/death（也支援 check/skill/tool/d20，但通常不設定 DC）。使用 bonus=5 可使 DC 加 5，或使用 set=15 設為所給的值。也可使用擲骰資料、骰子公式與條件判斷。"
+			},
+			"noAdvantage": {
+				"name": "抑制優勢模式",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"noCritical": {
+				"name": "抑制重擊",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/damage"
+			},
+			"noDisadvantage": {
+				"name": "抑制劣勢模式",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"fail": {
+				"name": "d20 擲骰失敗",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/save/skill/tool"
+			},
+			"fumble": {
+				"name": "d20 擲骰大失敗（自然 1）",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/initiative/save/skill/tool"
+			},
+			"success": {
+				"name": "d20 擲骰成功",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/save/skill/tool"
+			}
+		},
+		"flags.automated-conditions-5e.grants.ACTIONTYPE": {
+			"advantage": {
+				"name": "對對手的 d20 擲骰授予優勢",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"bonus": {
+				"name": "對對手的擲骰授予加值",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。以 bonus= 開頭並以 ; 分隔，例如 bonus=1d4 + 5 - opponentActor.abilities.dex.mod;"
+			},
+			"critical": {
+				"name": "對對手的擲骰授予重擊（自然 20 或傷害）",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"disadvantage": {
+				"name": "對對手的 d20 擲骰授予劣勢",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"modifier": {
+				"name": "授予 d20 擲骰的最小與最大調整值，以及傷害骰的最大與任意調整值",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。例如 modifier=min10"
+			},
+			"modifyDC": {
+				"name": "修改你針對他人所採取行動而進行之擲骰的 DC",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：save/conc/death（也支援 check/skill/tool/d20，但通常不設定 DC）。使用 bonus=5 可使 DC 加 5，或使用 set=15 設為所給的值。也可使用擲骰資料、骰子公式與條件判斷。"
+			},
+			"noAdvantage": {
+				"name": "授予無優勢模式",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"noCritical": {
+				"name": "授予無重擊",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/damage"
+			},
+			"noDisadvantage": {
+				"name": "授予無劣勢模式",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool"
+			},
+			"fail": {
+				"name": "對對手的 d20 擲骰授予失敗",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/save/skill/tool"
+			},
+			"fumble": {
+				"name": "對對手的 d20 擲骰授予大失敗（自然 1）",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/initiative/save/skill/tool"
+			},
+			"success": {
+				"name": "針對你或由你造成的 d20 擲骰成功",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/save/skill/tool"
+			}
+		},
+		"flags.automated-conditions-5e.aura.ACTIONTYPE": {
+			"advantage": {
+				"name": "提供優勢的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。數值格式範例：對豁免類 ACTIONTYPE 使用 radius=15;includeSelf;allies;str;cha; 會使 15 呎半徑內包含自身的所有盟友，在力量或魅力豁免上具有優勢。"
+			},
+			"bonus": {
+				"name": "提供加值的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。數值格式範例：對先攻類 ACTIONTYPE，效果值為 radius=20;bonus=-auraActor.abilities.cha.mod;opponentActor.statuses.surprised，則 20 呎內所有處於受驚狀態者，其擲骰會減去來源角色的魅力調整值"
+			},
+			"critical": {
+				"name": "強制重擊的光環（自然 20 或傷害）",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。數值格式：radius=數字;allies 或 enemies（省略則為全部）;其他條件"
+			},
+			"disadvantage": {
+				"name": "提供劣勢的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。數值格式：radius=數字;allies 或 enemies（省略則為全部）;其他條件"
+			},
+			"modifier": {
+				"name": "提供 d20 擲骰最小與最大調整值，以及傷害骰最大與任意調整值的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：d20/attack/check/concentration/damage/death/initiative/save/skill/tool。例如 modifier=min10; radius=(rollingActor.details.level < 10 ? 15 : 30); modifier=min10"
+			},
+			"modifyDC": {
+				"name": "修改受影響角色令牌所採取行動之 DC 的光環。",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：save/conc/death（也支援 check/skill/tool/d20，但通常不設定 DC）。照常使用 bonus/set 與 radius"
+			},
+			"noAdvantage": {
+				"name": "抑制優勢模式的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。照常使用 radius"
+			},
+			"noCritical": {
+				"name": "抑制重擊的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/damage。照常使用 radius"
+			},
+			"noDisadvantage": {
+				"name": "抑制劣勢模式的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/damage/death/initiative/save/skill/tool。照常使用 radius"
+			},
+			"fail": {
+				"name": "強制 d20 擲骰失敗的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/save/skill/tool。數值格式：radius=數字;allies 或 enemies（省略則為全部）;其他條件"
+			},
+			"fumble": {
+				"name": "強制 d20 擲骰大失敗的光環",
+				"description": "以持有該效果的角色為中心的光環。將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/initiative/save/skill/tool。數值格式：radius=數字;allies 或 enemies（省略則為全部）;其他條件"
+			},
+			"success": {
+				"name": "強制成功的光環",
+				"description": "將 ACTIONTYPE 替換為以下其中之一：all/d20/attack/check/concentration/death/save/skill/tool。數值格式：radius=數字;allies 或 enemies（省略則為全部）;其他條件"
+			}
+		}
+	},
+	"AC5E.Info": "資訊",
+	"AC5E.OptinDescription.AppliesNonRollEffect": "對{roll}套用非擲骰效果",
+	"AC5E.advantageBehaviorOverride": {
+		"Name": "覆寫系統優勢處理",
+		"Hint": "啟用後，AC5E 會抑制原生的優勢／劣勢擲骰，並將暫時性優勢／劣勢轉換為下列公式。"
+	},
+	"AC5E.advantageBehaviorAdvantageFormula": {
+		"Name": "優勢加值公式",
+		"Hint": "在存在暫時性優勢且已啟用覆寫時套用。範例：3d6kh1 或 2。"
+	},
+	"AC5E.advantageBehaviorDisadvantageFormula": {
+		"Name": "劣勢減值公式",
+		"Hint": "在存在暫時性劣勢且已啟用覆寫時套用。範例：-3d6kh1 或 -2。"
+	},
+	"AC5E.EffectValueEditor": {
+		"Label": {
+			"ConsumptionType": "消耗類型",
+			"UpdateTarget": "更新目標",
+			"Amount": "數量"
+		},
+		"Placeholder": {
+			"UsesCountAmount": "1 或 =5",
+			"UpdateAmount": "1、-1 或 =5"
+		},
+		"Hint": {
+			"ShowCadence": "顯示頻率控制（一次、每回合一次、每輪一次或每場戰鬥一次）。",
+			"ShowName": "為此項目加入自訂顯示名稱。",
+			"ShowDescription": "為顯示／提示文字加入簡短說明。",
+			"ShowUsesCount": "為此項目啟用使用次數設定。",
+			"ShowUpdate": "為此項目啟用角色更新設定。",
+			"SetMode": "將加值欄位視為絕對設定值，而非累加加值。",
+			"EnableUsesCountScaling": "為 usesCount 消耗值啟用最小／最大／步進縮放輸入。縮放啟用時，可在公式／條件中使用 scaleValue 來引用計算後的縮放數量。",
+			"UsesCountAmount": "正值為消耗，負值為恢復。使用 =值 可設定絕對值。",
+			"UpdateAmount": "正值為增加，負值為減少。使用 =值 可設定絕對值。",
+			"UpdateAmountStatus": "正值或 =1 會套用該狀態。零、負值或 =0 會移除。",
+			"UpdateAmountConcentration": "正值或 =1 會套用一般的專注狀態。零、負值或 =0 會移除。",
+			"UpdateAmountInspiration": "正值或 =1 會授予激勵。零、負值或 =0 會移除。",
+			"UpdateAmountExhaustion": "正值會增加力竭等級，負值會移除等級。使用 =0 可清除力竭。",
+			"ToggleOptin": "將此項目顯示為可選，讓使用者逐次擲骰時決定是否啟用。",
+			"ToggleItemLimited": "僅在來源物品／動作符合限定的來源情境時套用。",
+			"ToggleCriticalStatic": "直接套用此傷害加值或額外骰，不遵循一般重擊規則。",
+			"ToggleAllies": "光環作用於友軍角色令牌。",
+			"ToggleEnemies": "光環作用於敵方角色令牌。",
+			"ToggleIncludeSelf": "光環也可作用於來源角色。",
+			"ToggleSingleAura": "同一時間僅允許一個生效的光環來源作用。",
+			"ToggleWallsBlock": "牆壁可阻擋光環的觸及範圍／路徑。",
+			"ToggleRecover": "反向使用消耗，並恢復所設定的數量。",
+			"UsesCountSet": "使用 =數量 語法將目標設為絕對數量。",
+			"TogglePartialConsume": "不足時允許花費現有的量，而非直接阻擋。",
+			"ToggleRangeLongDisadvantage": "強制開啟長距離劣勢。",
+			"ToggleRangeNoLongDisadvantage": "強制關閉長距離劣勢。",
+			"ToggleRangeNearbyFoeDisadvantage": "強制開啟鄰近敵人的遠程劣勢。",
+			"ToggleRangeNoNearbyFoeDisadvantage": "強制關閉鄰近敵人的遠程劣勢。",
+			"ToggleRangeOutOfRangeFail": "強制超出距離的使用判定失敗。",
+			"ToggleRangeNoOutOfRangeFail": "強制超出距離的使用不判定失敗。",
+			"RangeShort": "使用 +值、-值，或直接填入數值來修改短距離。",
+			"RangeLong": "使用 +值、-值，或直接填入數值來修改長距離。",
+			"RangeReach": "使用 +值、-值，或直接填入數值來修改近戰觸及範圍。",
+			"RangeBonus": "使用 +值、-值，或直接填入數值來修改所有符合的距離值。"
+		}
+	},
+	"AC5E.Optin.UpdateSummary": {
+		"Updates": "更新{target}",
+		"UpdatesCompact": "更新{target}",
+		"Sets": "將{target}設為 {value}",
+		"AppliesTo": "對{target}套用 {value}",
+		"RemovesFrom": "從{target}移除 {value}",
+		"AppliesWithUnit": "對{target}套用 {value} {unit}",
+		"RemovesWithUnit": "從{target}移除 {value} {unit}",
+		"Exhaustion": "力竭",
+		"ExhaustionLevel": "等級",
+		"ExhaustionLevels": "等級"
+	}
+}

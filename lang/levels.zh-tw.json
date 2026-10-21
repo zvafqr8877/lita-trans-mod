@@ -1,0 +1,317 @@
+{
+	"levels": {
+		"modulename": "Levels",
+		"multiLevelFog": {
+			"createdScenes": "已建立 %n 個場景。<a href='https://wiki.theripper93.com/levels#multilevel-fog-of-war' target='_blank'>了解更多</a>",
+			"noLevels": "此場景沒有多個樓層。",
+			"alreadyExists": "場景已存在，請檢視該場景並重設它的迷霧以重設特定樓層的迷霧，或刪除該場景後重新初始化多樓層迷霧。場景：",
+			"advancedFogWarn": "Levels：必須停用進階戰爭迷霧設定，多樓層迷霧才能運作，請在模組設定中停用，或針對各圖塊停用。"
+		},
+		"settings": {
+			"blockSightMovement": {
+				"name": "阻擋視線與移動",
+				"hint": "讓此圖塊阻擋角色令牌的視線與移動。這是相容性功能，讓你能更順利地從 Levels 模組轉換到 Foundry 核心的場景樓層。<br /><br /><strong>建議停用此選項，改用具有「定義表面」行為的區域。</strong><br /><br />請注意，此功能不會再更新，如果它失效也不會修復。"
+			},
+			"enableTooltips": {
+				"name": "啟用提示視窗",
+				"hint": "滑鼠移到樓層物件上時，顯示包含頂部與底部的提示視窗"
+			},
+			"tokenElevScale": {
+				"name": "標高縮放",
+				"hint": "依被操控角色令牌的標高改變角色令牌的大小"
+			},
+			"tokenElevScaleMultiSett": {
+				"name": "標高縮放倍率",
+				"hint": "把標高縮放乘上這個數值。大於 1 會讓角色令牌變大，小於 1 則會變小"
+			},
+			"fogHiding": {
+				"name": "進階戰爭迷霧",
+				"hint": "在已探索的戰爭迷霧中隱藏尚未探索的樓層"
+			},
+			"lockElevation": {
+				"name": "鎖定標高",
+				"hint": "防止玩家從角色令牌 HUD 變更標高。請注意，如果玩家有編輯角色令牌的權限，仍可在角色令牌設定中變更"
+			},
+			"defaultLosHeight": {
+				"name": "預設角色令牌高度",
+				"hint": "角色令牌的高度（該生物眼睛所在的位置），以單位計算。預設為 6。"
+			},
+			"autoLOSHeight": {
+				"name": "自動計算角色令牌高度",
+				"hint": "依大小與縮放比例自動計算角色令牌高度。會忽略預設角色令牌高度，但各角色令牌上設定為非 0 的值，優先於自動計算"
+			},
+			"debugRaycast": {
+				"name": "除錯：啟用射線視覺化",
+				"hint": "顯示 3D 視線射線（綠色為可見，紅色為不可見）"
+			},
+			"preciseLightOcclusion": {
+				"name": "實驗性：精確光線遮蔽",
+				"hint": "消除光線遮蔽的瑕疵，但會犧牲效能"
+			},
+			"preciseTokenVisibility": {
+				"name": "精確角色令牌可見度",
+				"hint": "啟用此選項後，除了中心之外，也會檢查角色令牌四個角落的視線，但會犧牲一些效能"
+			},
+			"exactTokenVisibility": {
+				"name": "完整角色令牌可見度",
+				"hint": "必須啟用「精確角色令牌可見度」，此選項才會生效。此選項會對角色令牌的角落進行 11 點檢查。如果你使用 3D Canvas，建議啟用"
+			},
+			"multilevelFogFolder": {
+				"name": "多樓層迷霧資料夾",
+				"hint": "用來儲存多樓層戰爭迷霧所產生場景的資料夾名稱。"
+			},
+			"forceUiRefresh": {
+				"name": "強制更新介面",
+				"hint": "強制更頻繁地更新樓層介面，但會犧牲效能，啟用後可能在特定系統（例如 PF2e）造成問題"
+			},
+			"hideElevation": {
+				"name": "隱藏標高",
+				"hint": "隱藏角色令牌的標高",
+				"opt0": "不隱藏",
+				"opt1": "對玩家隱藏",
+				"opt2": "對所有人隱藏"
+			},
+			"revealTokenInFog": {
+				"name": "在迷霧中顯示角色令牌",
+				"hint": "如果角色令牌可見，就揭開該角色令牌周圍的戰爭迷霧"
+			},
+			"strictVisionCheck": {
+				"name": "嚴格視野檢查",
+				"hint": "停用時，黑暗光源不會阻擋視線。啟用時，位於視野多邊形之外、但在 3D 視線計算中可見的角色令牌會是可見的。"
+			},
+			"migrateOnStartup": {
+				"name": "啟動時遷移設定",
+				"hint": "啟用後，模組會在啟動時把資料從 V11 的資料結構遷移到 V12 的資料結構。你可以使用巨集「CONFIG.Levels.helpers.migration.showManualMigrationDialog()」來手動遷移你的設定。"
+			},
+			"migrateOnStartupDialog": {
+				"name": "啟動時開啟「遷移設定對話視窗」",
+				"hint": "啟用後，模組會在啟動時開啟對話視窗，把資料從 V13 的資料結構遷移到 V14 的資料結構。你可以使用巨集「CONFIG.Levels.helpers.migration.showManualMigrationDialog()」來手動遷移你的設定。"
+			},
+			"fastForwardMigration": {
+				"name": "快速遷移",
+				"hint": "啟用後，遷移過程中會跳過所有對話視窗，並使用預設的遷移行為。"
+			}
+		},
+		"tileconfig": {
+			"noOverhead": "這不是頭頂圖塊，此圖塊會以背景標高渲染。要變更這些設定，請在「頭頂」分頁中啟用「是頭頂圖塊嗎？」選項。",
+			"occlusionNone": "遮蔽模式設為「無」，此圖塊不會阻擋視線。如果你想讓此圖塊阻擋視線，請把遮蔽模式設為「淡化」。",
+			"rangeTop": {
+				"name": "高度（頂部）"
+			},
+			"rangeBottom": {
+				"name": "高度（底部）"
+			},
+			"showIfAbove": {
+				"name": "在下方時也顯示？",
+				"hint": "啟用後，即使角色令牌低於底部高度範圍，圖塊仍會顯示（例如用於陽台）"
+			},
+			"showAboveRange": {
+				"name": "最大標高差",
+				"hint": "啟用「在下方時也顯示？」時，這是角色令牌與圖塊之間的最大標高差，超過這個值，圖塊就不會再顯示。"
+			},
+			"isBasement": {
+				"name": "嚴格範圍",
+				"hint": "啟用後，只有當角色令牌位於圖塊範圍內時才會顯示圖塊，也就是說，高於頂部範圍的角色令牌看不到此圖塊。"
+			},
+			"noFogHide": {
+				"name": "不要在迷霧中隱藏此圖塊",
+				"hint": "把此圖塊排除在 Levels 的「進階戰爭迷霧」之外。"
+			},
+			"range": {
+				"unit": "標高"
+			},
+			"excludeFromChecker": {
+				"name": "排除於場景檢查器之外"
+			},
+			"noCollision": {
+				"name": "允許視線",
+				"hint": "啟用後，此圖塊不會阻擋視線。"
+			},
+			"allWallBlockSight": {
+				"name": "所有牆壁都阻擋視線",
+				"hint": "勾選後，當此圖塊沒有被遮蔽時，此圖塊下方的所有牆壁都會視為阻擋視野。"
+			}
+		},
+		"drawingconfig": {
+			"hb": {
+				"name": "高度（底部）"
+			},
+			"ht": {
+				"name": "高度（頂部）"
+			},
+			"range": {
+				"name": "孔洞範圍"
+			},
+			"elevatorFloors": {
+				"name": "電梯樓層",
+				"hint": "樓層的定義格式：標高,名稱|標高,名稱…… - 例如 0,一樓|10,二樓……"
+			},
+			"isHole": {
+				"name": "Levels 繪圖模式",
+				"opt0": "無",
+				"opt1": "孔洞",
+				"opt2": "階梯",
+				"opt21": "階梯（單向 - 向下）",
+				"opt22": "階梯（單向 - 向上）",
+				"opt3": "電梯"
+			}
+		},
+		"drawingHud": {
+			"title": "切換階梯的鎖定狀態"
+		},
+		"tokenconfig": {
+			"tokenHeight": {
+				"name": "角色令牌視線高度",
+				"unit": "（距離）"
+			}
+		},
+		"template": {
+			"elevation": {
+				"name": "標高"
+			},
+			"special": {
+				"name": "特殊"
+			},
+			"depth": {
+				"name": "深度"
+			}
+		},
+		"sceneconfig": {
+			"backgroundElevation": {
+				"name": "背景標高",
+				"notes": "以距離單位表示的標高，用來設定背景圖片與腳下圖塊的高度。"
+			},
+			"weatherElevation": {
+				"name": "天氣標高",
+				"notes": "以距離單位表示的標高，用來設定天氣效果的高度。"
+			},
+			"lightMasking": {
+				"name": "Levels：不要停用光源",
+				"notes": "啟用後，Levels 不會接管光源的可見度，在使用多個樓層的場景中，應該停用此選項。"
+			}
+		},
+		"controls": {
+			"main": {
+				"name": "Levels"
+			},
+			"levelsview": {
+				"name": "啟用 Levels 檢視／放置"
+			},
+			"definelevels": {
+				"name": "編輯樓層"
+			},
+			"levelup": {
+				"name": "上一層樓"
+			},
+			"leveldown": {
+				"name": "下一層樓"
+			},
+			"levelsroof": {
+				"name": "屋頂檢視／放置"
+			},
+			"levelshole": {
+				"name": "啟用時把繪圖放置為階梯，停用時放置為孔洞"
+			},
+			"levelsclear": {
+				"name": "清除樓層"
+			},
+			"placeOverhead": {
+				"name": "把圖塊放置為樓層「內」的頭頂圖塊"
+			},
+			"setTemplateElevation": {
+				"name": "設定下一個放置的範本的標高"
+			},
+			"suppressBrmode": {
+				"name": "抑制 Better Roofs 模式的套用"
+			}
+		},
+		"dialog": {
+			"levelsclear": {
+				"title": "清除樓層",
+				"content": "要清除所有已儲存的樓層嗎？"
+			},
+			"define": {
+				"warn": "樓層的定義格式：底部,頂部|底部,頂部 - 例如 0,9|10,19|20,29",
+				"title": "定義此場景的樓層",
+				"text": "Levels："
+			},
+			"removeLevel": {
+				"title": "移除樓層",
+				"content": "確定要移除這個樓層嗎？"
+			},
+			"getFromScene": {
+				"title": "從場景取得樓層",
+				"content": "要從目前場景取得樓層嗎？這會覆蓋你目前的樓層"
+			},
+			"elevator": {
+				"title": "Levels - 選擇樓層"
+			},
+			"elevation": {
+				"title": "設定下一次放置範本的標高"
+			},
+			"sceneDrop": {
+				"title": "Levels - 場景拖放",
+				"content": "被拖放場景中的所有元素都會被放置在目前的樓層，確定要繼續嗎？"
+			},
+			"checkScene": {
+				"title": "Levels - 場景檢查器",
+				"content": "偵測到有些圖塊的多邊形可能沒有被自動偵測，或沒有被正確定義，請再次檢查以下圖塊：",
+				"learnMore": "不知道多邊形是什麼？遇到其他問題？請看看 Levels 頁面，裡面有專門介紹多邊形的影片！",
+				"noIssues": "沒有偵測到任何問題！",
+				"excluded": "已排除於檢查之外"
+			}
+		},
+		"ui": {
+			"title": "Levels - 圖層工具",
+			"players": "顯示玩家",
+			"stair": "把區域放置為階梯",
+			"addLevel": "新增樓層",
+			"editLevels": "編輯樓層",
+			"getFromScene": "從場景取得樓層",
+			"fog": "設定多樓層迷霧（測試版）",
+			"clearLevels": "清除樓層",
+			"debugScene": "除錯場景（紅色表示偵測到問題）",
+			"minElevDiff": "最小樓層大小",
+			"tokenAttacher": "依據目前樓層放置 Token Attacher 預製件<hr>如果你不是在放置預製件，此選項必須停用",
+			"warning": "警告！場景設定中啟用了「不要停用光源」——多個樓層將無法正常運作。點擊以解決此問題。"
+		},
+		"yesnodialog": {
+			"yes": "確認",
+			"no": "取消"
+		},
+		"widget": {
+			"title": "Levels",
+			"element": "樓層"
+		},
+		"form": {
+			"bottom": "底部：",
+			"top": "頂部：",
+			"name": "名稱：",
+			"currentLevel": "目前的樓層",
+			"addNew": "新增樓層",
+			"tip": "*樓層不應重疊（例如 0,9 / 10,19 / 20,29）",
+			"suggestedLevels": "產生建議樓層",
+			"autoLevels": "從場景取得樓層"
+		},
+		"err": {
+			"collision": "Levels：嘗試的移動撞到了至少一個地板／天花板",
+			"tokenOOB": "Levels：角色令牌 %n 的高度超過了目前所選樓層的天花板。請手動設定角色令牌高度，或把你的樓層調高。<a href='https://wiki.theripper93.com/free/wall-height#token-height' target='_blank'>在這裡了解更多</a>。",
+			"wallheight": "警告！Levels 需要 Wall Height 版本 4.1.0 或以上才能正常運作。",
+			"lessfog": "Levels：警告！偵測到 Less Fog——角色令牌可見度將無法如預期運作，請停用其中一個模組",
+			"tokenheight": "Levels：警告！偵測到 Wall Height 模組啟用了「啟用角色令牌高度」選項——此設定與 Levels 不相容，已被停用！",
+			"elevatedvision": "Levels：警告！偵測到 Elevated Vision 模組啟用了「自動角色令牌標高的預設值」選項——已知此設定會干擾 Levels 的正常功能，已被停用！",
+			"elevatedvisioncompat": "Levels：警告！偵測到 Elevated Vision 模組——已知此模組會干擾 Levels 的正常功能，不應與 Levels 一起使用。"
+		},
+		"info": {
+			"advancedMode": "Levels：Better Roofs 的進階模式選項已啟用。"
+		},
+		"firsttime": {
+			"dialog": "."
+		},
+		"conflicts": {
+			"midiqol": {
+				"tokenvis": "在 MidiQOL 中啟用「玩家可控制擁有的隱藏角色令牌」選項，會造成角色令牌可見度的問題。請在模組設定中停用此選項。"
+			}
+		}
+	}
+}

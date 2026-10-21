@@ -1,0 +1,110 @@
+{
+	"AURAEFFECTS": {
+		"ACTIVEEFFECT": {
+			"Aura": {
+				"FIELDS": {
+					"applyToSelf": {
+						"hint": "啟用時，此光環也會作用在來源角色令牌上。",
+						"label": "作用於自身"
+					},
+					"bestFormula": {
+						"hint": "用來源角色的擲骰資料計算的公式，在無法疊加的情況下，用來判定哪個效果最強。留空則先到先得。",
+						"label": "「最佳」公式"
+					},
+					"canStack": {
+						"hint": "啟用時，同名的其他光環可以同時作用在任何適用的角色令牌上。",
+						"label": "光環可疊加"
+					},
+					"collisionType": {
+						"hint": "哪一種牆壁會阻擋此光環（若有的話）。",
+						"label": "碰撞類型"
+					},
+					"color": {
+						"hint": "留空時，會沿用使用者的顏色（若沒有任何使用者把此角色設為自己的角色，則沿用 GM 的顏色）。",
+						"label": "顏色"
+					},
+					"combatOnly": {
+						"hint": "啟用時，此效果在戰鬥之外會被抑制。",
+						"label": "僅限戰鬥中"
+					},
+					"disableOnHidden": {
+						"hint": "啟用時，所附著的角色令牌處於隱藏狀態時，此效果會被抑制。",
+						"label": "隱藏時停用"
+					},
+					"disposition": {
+						"Choices": {
+							"Any": "任何",
+							"Friendly": "友善",
+							"Hostile": "敵對"
+						},
+						"hint": "此光環會作用在哪些敵友關係的角色令牌上（相對於來源角色令牌）。",
+						"label": "敵友關係"
+					},
+					"distanceFormula": {
+						"hint": "指定此光環延伸的半徑（可使用擲骰資料）。",
+						"label": "距離"
+					},
+					"evaluatePreApply": {
+						"hint": "啟用時，會在套用效果之前先計算變更值，必要時使用來源角色的擲骰資料。",
+						"label": "提前計算變更"
+					},
+					"overrideName": {
+						"hint": "套用後的效果要使用什麼名稱（留空則使用原效果的名稱）。",
+						"label": "效果名稱"
+					},
+					"script": {
+						"hint": "一個運算式，結果為真（或留空）時，代表光環應該生效。",
+						"label": "條件腳本"
+					},
+					"showRadius": {
+						"hint": "是否對所有使用者顯示光環邊界。",
+						"label": "顯示半徑"
+					}
+				}
+			}
+		},
+		"ConvertToAura": "轉換為光環",
+		"ConvertToAuraHint": "這會立即把此效果轉換為光環來源效果。",
+		"ConvertToNormal": "還原為一般效果",
+		"ConvertToNormalHint": "這會立即把此效果還原為原本的類型，光環設定將會遺失。",
+		"Errors": {
+			"ScriptError": "執行角色「{actor}」上效果「{effect}」的 Aura Effects 條件腳本時發生錯誤：\n{error}"
+		},
+		"Migrations": {
+			"ActiveAurasBegin": "開始從 Active Auras 遷移到 Aura Effects……",
+			"ActiveAurasChatMessage": "感謝安裝 Aura Effects！如果你之前使用過 Active Auras，有一個遷移腳本可以把你所有的 Active Aura 效果轉換成 Aura Effects。你隨時可以在 Aura Effects 資料包資料夾中找到它，或是點這裡執行：@UUID[Compendium.auraeffects.AuraEffectsMacros.Macro.NeaP6NSy6TzLQuKS]{從 Active Auras 遷移}",
+			"ActiveAurasComplete": "從 Active Auras 遷移到 Aura Effects 已完成！",
+			"AllCompleted": "所有 Aura Effects 遷移都已完成！",
+			"Beginning": "開始 Aura Effects 遷移……"
+		},
+		"NoActiveGM": "沒有 GM 登入時，Aura Effects 不會嘗試運作。",
+		"PotentialSystemIncompatibility": "請注意，由於此系統的基礎 Active Effect 定義與 Aura Effects 新增的欄位重疊，任何光環類型的效果都不會擁有一般效果上那些系統專屬的強化功能。",
+		"SETTINGS": {
+			"DefaultVisibility": {
+				"Hint": "啟用時，所有新建立的光環效果預設都會顯示視覺化範圍。",
+				"Name": "光環效果預設可見"
+			},
+			"DisableScrollingText": {
+				"Hint": "停用在角色令牌的角色身上新增或移除光環造成的效果時，會出現的捲動文字。",
+				"Name": "停用光環效果的捲動文字"
+			},
+			"ExactCircles": {
+				"Hint": "啟用時，若「格線對角線」設為「精確」，視覺化的光環會顯示為正圓形。（這可能導致圓形邊緣附近的視覺化不準確，光環半徑越大越明顯。）",
+				"Name": "以精確對角線顯示圓形"
+			},
+			"HighlightMode": {
+				"Hint": "設定光環區域要標示真實形狀，還是涵蓋到的格子。",
+				"Name": "光環標示模式"
+			},
+			"PreferLatest": {
+				"Hint": "啟用時，若沒有「最佳」光環，會優先採用無法疊加的光環中最新的那一個。預設情況下，「最佳」平手時會保留既有的效果。",
+				"Name": "優先採用最新的光環"
+			}
+		},
+		"SHEETS.AuraActiveEffectSheet": "光環 Active Effect 表單"
+	},
+	"EFFECT.TABS": {
+		"aura": "光環"
+	},
+	"TYPES.ActiveEffect.auraeffects.aura": "光環"
+}

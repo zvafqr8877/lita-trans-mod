@@ -1,0 +1,57 @@
+{
+	"ACDC": {
+		"ButtonHint": "修改核心骰子設定",
+		"Config": "ACDC 控制項",
+		"ToggleMode": "切換模式",
+		"Keybind": "切換 ACDC 擲骰模式",
+		"LinksMenu": {
+			"Name": "模組支援",
+			"Label": "連結",
+			"Hint": "開啟 ACDC 說明文件、問題追蹤與支援連結。",
+			"GitHubMessage": "GitHub 連結",
+			"DiscordMessage": "進入巢穴",
+			"SupportMessage": "賞個銅板給你的熊地精",
+			"Title": "資源與支援：ACDC"
+		},
+		"Modes": {
+			"auto": {
+				"Label": "自動",
+				"Notification": "Foundry 的擲骰現在是自動的！"
+			},
+			"manual": {
+				"Label": "手動",
+				"Notification": "Foundry 的擲骰現在是手動的！"
+			},
+			"smart": {
+				"Label": "智慧分流",
+				"Notification": "Foundry 的擲骰現在使用 ACDC 智慧分流！"
+			}
+		},
+		"Settings": {
+			"RollMode": {
+				"Name": "ACDC 擲骰模式",
+				"Hint": "選擇 ACDC 要把骰子結算方式設為自動、原生手動，或智慧分流。"
+			},
+			"ManualRollTypes": {
+				"Name": "智慧分流的擲骰類型",
+				"Hint": "選擇要手動結算的擲骰類型，其他類型則自動擲骰。若都不選，ACDC 會把所有擲骰在自動與手動之間切換。"
+			},
+			"ManualNonRegisteredDenominations": {
+				"Name": "包含未登錄的骰面",
+				"Hint": "在手動或智慧分流的擲骰中，包含未登錄於 Foundry 骰子結算設定的骰面，例如 1d7。"
+			},
+			"RollTypes": {
+				"attack": "攻擊擲骰",
+				"initiative": "先攻擲骰",
+				"damage": "傷害擲骰",
+				"healing": "治療擲骰",
+				"skill": "技能檢定",
+				"tool": "工具檢定",
+				"save": "豁免檢定",
+				"deathSave": "瀕死豁免",
+				"concentration": "專注檢定",
+				"check": "屬性檢定"
+			}
+		}
+	}
+}
